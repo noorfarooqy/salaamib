@@ -1,0 +1,21 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSCustomerService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:QUERYCUSTOMERDETAILS_IOFS_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>001</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSCustomerService</fcub:SERVICE>
+            <fcub:OPERATION>QueryCustomerDetails</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Stvws-Stdcifqy-Query-IO>
+               <fcub:KEY_ID>C</fcub:KEY_ID>
+               <fcub:VALUE>007129</fcub:VALUE>
+            </fcub:Stvws-Stdcifqy-Query-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:QUERYCUSTOMERDETAILS_IOFS_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>

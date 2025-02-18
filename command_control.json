@@ -1,0 +1,245 @@
+{
+    "project_name": "Internet Banking Solution",
+    "description": "A secure, scalable, and modular internet banking system integrated with the bank's Core Banking System (Flexcube 14.3) using SOAP XML.",
+    "stack": {
+      "backend": {
+        "framework": "FastAPI",
+        "database": "PostgreSQL",
+        "task_queue": "Celery",
+        "cache": "Redis",
+        "authentication": "JWT & OTP-based"
+      },
+      "frontend": {
+        "framework": "VueJS 3",
+        "styling": "TailwindCSS",
+        "state_management": "Vuex",
+        "routing": "Vue Router",
+        "communication": "Axios (REST API)"
+      },
+      "integration": {
+        "cbs": "SOAP XML API (Flexcube 14.3)",
+        "sms_gateway": "For OTP verification",
+        "payment_gateway": "For external transactions",
+        "monitoring": "Prometheus & Grafana"
+      },
+      "deployment": {
+        "containerization": "Docker & Kubernetes",
+        "ci_cd": "GitHub Actions",
+        "web_server": "Nginx"
+      }
+    },
+    "modules": [
+      {
+        "name": "User Authentication & Onboarding",
+        "description": "Handles user registration, authentication, and session management.",
+        "tasks": [
+          {
+            "task": "Implement CIF verification",
+            "description": "Receive CIF number from user, validate with CBS via SOAP XML API.",
+            "api_endpoints": [
+              {
+                "method": "POST",
+                "route": "/api/auth/verify-cif",
+                "request": {
+                  "cif_number": "string"
+                },
+                "response": {
+                  "status": "success",
+                  "message": "CIF validated",
+                  "phone_number": "+254700000000"
+                }
+              }
+            ]
+          },
+          {
+            "task": "Generate OTP for registration",
+            "description": "Send OTP to the registered phone number.",
+            "api_endpoints": [
+              {
+                "method": "POST",
+                "route": "/api/auth/send-otp",
+                "request": {
+                  "cif_number": "string"
+                },
+                "response": {
+                  "status": "success",
+                  "message": "OTP sent"
+                }
+              }
+            ]
+          },
+          {
+            "task": "User password setup",
+            "description": "Allow users to create a password after OTP verification.",
+            "api_endpoints": [
+              {
+                "method": "POST",
+                "route": "/api/auth/setup-password",
+                "request": {
+                  "cif_number": "string",
+                  "otp": "string",
+                  "password": "string"
+                },
+                "response": {
+                  "status": "success",
+                  "message": "Password setup complete"
+                }
+              }
+            ]
+          },
+          {
+            "task": "User Login",
+            "description": "Authenticate users using CIF and password, return JWT token.",
+            "api_endpoints": [
+              {
+                "method": "POST",
+                "route": "/api/auth/login",
+                "request": {
+                  "cif_number": "string",
+                  "password": "string"
+                },
+                "response": {
+                  "status": "success",
+                  "token": "jwt_token_string"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Account Management",
+        "description": "Provides account-related operations such as balance inquiry and transaction history.",
+        "tasks": [
+          {
+            "task": "Fetch Account Summary",
+            "description": "Retrieve account details like balance and currency from CBS.",
+            "api_endpoints": [
+              {
+                "method": "GET",
+                "route": "/api/accounts/summary",
+                "headers": {
+                  "Authorization": "Bearer jwt_token"
+                },
+                "response": {
+                  "status": "success",
+                  "accounts": [
+                    {
+                      "account_number": "1234567890",
+                      "balance": 1000.50,
+                      "currency": "USD"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "task": "Fetch Transaction History",
+            "description": "Retrieve user's account transactions with filtering options.",
+            "api_endpoints": [
+              {
+                "method": "GET",
+                "route": "/api/accounts/transactions",
+                "headers": {
+                  "Authorization": "Bearer jwt_token"
+                },
+                "params": {
+                  "account_number": "1234567890",
+                  "from_date": "YYYY-MM-DD",
+                  "to_date": "YYYY-MM-DD"
+                },
+                "response": {
+                  "status": "success",
+                  "transactions": [
+                    {
+                      "date": "2025-01-10",
+                      "amount": 200.00,
+                      "type": "debit",
+                      "description": "Payment to Vendor"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Funds Transfer",
+        "description": "Handles various types of transfers including internal, interbank, and mobile wallet transfers.",
+        "tasks": [
+          {
+            "task": "Internal Funds Transfer",
+            "description": "Transfer funds between user's own accounts.",
+            "api_endpoints": [
+              {
+                "method": "POST",
+                "route": "/api/transfer/internal",
+                "headers": {
+                  "Authorization": "Bearer jwt_token"
+                },
+                "request": {
+                  "from_account": "1234567890",
+                  "to_account": "0987654321",
+                  "amount": 500.00
+                },
+                "response": {
+                  "status": "success",
+                  "message": "Transfer successful"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Security & Compliance",
+        "description": "Ensures system security, fraud detection, and compliance with banking regulations.",
+        "tasks": [
+          {
+            "task": "Implement Role-Based Access Control (RBAC)",
+            "description": "Enforce user roles and permissions.",
+            "api_endpoints": [
+              {
+                "method": "POST",
+                "route": "/api/admin/create-role",
+                "headers": {
+                  "Authorization": "Bearer admin_token"
+                },
+                "request": {
+                  "role_name": "admin",
+                  "permissions": ["view_accounts", "manage_users"]
+                },
+                "response": {
+                  "status": "success",
+                  "message": "Role created"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Infrastructure & Deployment",
+        "description": "Handles system deployment, scaling, and monitoring.",
+        "tasks": [
+          {
+            "task": "Deploy Backend with Docker & Kubernetes",
+            "description": "Containerize backend and deploy using Kubernetes.",
+            "deployment_steps": [
+              "Create Dockerfile for FastAPI backend",
+              "Build and push Docker image",
+              "Deploy using Kubernetes manifests"
+            ]
+          },
+          {
+            "task": "Setup CI/CD Pipeline",
+            "description": "Automate build, test, and deployment processes.",
+            "tools": ["GitHub Actions", "Jenkins"]
+          }
+        ]
+      }
+    ]
+  }
+  

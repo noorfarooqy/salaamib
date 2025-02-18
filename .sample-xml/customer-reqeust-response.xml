@@ -1,0 +1,56 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <QUERYCUSTOMERDETAILS_IOFS_RES xmlns="http://fcubs.ofss.com/service/FCUBSCustomerService">
+         <FCUBS_HEADER>
+            <SOURCE>SMFBPORTAL</SOURCE>
+            <UBSCOMP>FCUBS</UBSCOMP>
+            <MSGID>6125041000561325</MSGID>
+            <CORRELID>null</CORRELID>
+            <USERID>SYSTEM</USERID>
+            <ENTITY>null</ENTITY>
+            <BRANCH>001</BRANCH>
+            <MODULEID>ST</MODULEID>
+            <SERVICE>FCUBSCustomerService</SERVICE>
+            <OPERATION>QueryCustomerDetails</OPERATION>
+            <DESTINATION>SMFBPORTAL</DESTINATION>
+            <FUNCTIONID>STDCIFQY</FUNCTIONID>
+            <ACTION>EXECUTEQUERY</ACTION>
+            <MSGSTAT>SUCCESS</MSGSTAT>
+         </FCUBS_HEADER>
+         <FCUBS_BODY>
+            <Stvws-Stdcifqy-Query-Full>
+               <KEY_ID>C</KEY_ID>
+               <VALUE>007129</VALUE>
+               <Stvws-Stdcifqy>
+                  <CUSTOMER_ID>007129</CUSTOMER_ID>
+                  <EMAIL>mnoor@salaammfnank.co.ke</EMAIL>
+                  <FIRST_NAME>MOHAMED</FIRST_NAME>
+                  <LAST_NAME>AHMED</LAST_NAME>
+                  <GENDER>M</GENDER>
+                  <TITLE>MR</TITLE>
+                  <SHORT_NAME>39287462MOHAMED</SHORT_NAME>
+                  <ADDRESS_LINE1>P.O BOX 7447 - 00610</ADDRESS_LINE1>
+                  <ADDRESS_LINE2>HIGHRIDGE MALL A03 3rd PARKLANDS</ADDRESS_LINE2>
+                  <ADDRESS_LINE4>NAIROBI</ADDRESS_LINE4>
+                  <ADDRESS_COUNTRY>KE</ADDRESS_COUNTRY>
+                  <MOBILE_NO>254724441724</MOBILE_NO>
+                  <IS_VERIFIED>V</IS_VERIFIED>
+                  <NAITONALITY>KE</NAITONALITY>
+                  <UNIQUE_ID_NAME>NATIONAL_ID</UNIQUE_ID_NAME>
+                  <UNIQUE_ID_VALUE>39287462</UNIQUE_ID_VALUE>
+                  <CREATED_AT>2025-06-05</CREATED_AT>
+                  <UPDATED_AT>2025-06-05</UPDATED_AT>
+                  <CUSTOMER_TYPE>I</CUSTOMER_TYPE>
+                  <CATEGORY>INDIVIDUAL</CATEGORY>
+               </Stvws-Stdcifqy>
+            </Stvws-Stdcifqy-Query-Full>
+            <FCUBS_WARNING_RESP>
+               <WARNING>
+                  <WCODE>ST-SAVE-023</WCODE>
+                  <WDESC>Record Successfully Retrieved</WDESC>
+               </WARNING>
+            </FCUBS_WARNING_RESP>
+         </FCUBS_BODY>
+      </QUERYCUSTOMERDETAILS_IOFS_RES>
+   </S:Body>
+</S:Envelope>

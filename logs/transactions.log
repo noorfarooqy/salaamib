@@ -1,0 +1,180 @@
+2025-02-17 12:20:33 | INFO     | ==================================================
+2025-02-17 12:20:33 | INFO     | Starting Transaction Creation Process
+2025-02-17 12:20:33 | INFO     | Total records to process: 21
+2025-02-17 12:20:33 | INFO     | ==================================================
+2025-02-17 12:20:33 | INFO     | ==================================================
+2025-02-17 12:20:33 | INFO     | Starting Transaction Creation Process
+2025-02-17 12:20:33 | INFO     | Total records to process: 21
+2025-02-17 12:20:33 | INFO     | ==================================================
+2025-02-17 12:20:33 | INFO     | Starting batch transaction process for 21 records
+2025-02-17 12:20:33 | INFO     | Processing [1/21] MPESA ref: TB93FNRYO5
+2025-02-17 12:20:33 | INFO     | Processing main transaction for ref: 1392972957
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392972957
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392972957: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing charge transaction for ref: 1392972957CGA
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392972957CGA
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392972957CGA: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing [2/21] MPESA ref: TB90FO1JAG
+2025-02-17 12:20:33 | INFO     | Processing main transaction for ref: 1392973532
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392973532
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392973532: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing charge transaction for ref: 1392973532CGA
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392973532CGA
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392973532CGA: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing [3/21] MPESA ref: TB99FP4K6T
+2025-02-17 12:20:33 | INFO     | Processing main transaction for ref: 1392975996
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392975996
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392975996: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing charge transaction for ref: 1392975996CGA
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392975996CGA
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392975996CGA: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing [4/21] MPESA ref: TB93FP4UW7
+2025-02-17 12:20:33 | INFO     | Processing main transaction for ref: 1392976009
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392976009
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392976009: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing charge transaction for ref: 1392976009CGA
+2025-02-17 12:20:33 | INFO     | Successfully created transaction 1392976009CGA
+2025-02-17 12:20:33 | INFO     | CBS Warning for 1392976009CGA: Transaction completed Succesfully
+2025-02-17 12:20:33 | INFO     | Processing [5/21] MPESA ref: TB92FOE25M
+2025-02-17 12:20:33 | INFO     | Processing main transaction for ref: 1392974322
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1392974322
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1392974322: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing charge transaction for ref: 1392974322CGA
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1392974322CGA
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1392974322CGA: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing [6/21] MPESA ref: TB99FP1ILT
+2025-02-17 12:20:34 | INFO     | Processing main transaction for ref: 1392975816
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1392975816
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1392975816: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing charge transaction for ref: 1392975816CGA
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1392975816CGA
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1392975816CGA: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing [7/21] MPESA ref: TAT9ZHKNQD
+2025-02-17 12:20:34 | INFO     | Processing main transaction for ref: 1389842183
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1389842183
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1389842183: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing charge transaction for ref: 1389842183CGA
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1389842183CGA
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1389842183CGA: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing [8/21] MPESA ref: TB97FOWO3T
+2025-02-17 12:20:34 | INFO     | Processing main transaction for ref: 1392975502
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1392975502
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1392975502: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing charge transaction for ref: 1392975502CGA
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1392975502CGA
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1392975502CGA: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing [9/21] MPESA ref: TB25F8KR8H
+2025-02-17 12:20:34 | INFO     | Processing main transaction for ref: 1390769135
+2025-02-17 12:20:34 | INFO     | Successfully created transaction 1390769135
+2025-02-17 12:20:34 | INFO     | CBS Warning for 1390769135: Transaction completed Succesfully
+2025-02-17 12:20:34 | INFO     | Processing charge transaction for ref: 1390769135CGA
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1390769135CGA
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1390769135CGA: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing [10/21] MPESA ref: TB92FO7K2O
+2025-02-17 12:20:35 | INFO     | Processing main transaction for ref: 1392973901
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392973901
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392973901: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing charge transaction for ref: 1392973901CGA
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392973901CGA
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392973901CGA: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing [11/21] MPESA ref: TB92FOH8MG
+2025-02-17 12:20:35 | INFO     | Processing main transaction for ref: 1392974516
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392974516
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392974516: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing charge transaction for ref: 1392974516CGA
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392974516CGA
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392974516CGA: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing [12/21] MPESA ref: TB94FP1MRE
+2025-02-17 12:20:35 | INFO     | Processing main transaction for ref: 1392975803
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392975803
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392975803: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing charge transaction for ref: 1392975803CGA
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392975803CGA
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392975803CGA: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing [13/21] MPESA ref: TB99FNTZDJ
+2025-02-17 12:20:35 | INFO     | Processing main transaction for ref: 1392973073
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392973073
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392973073: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing charge transaction for ref: 1392973073CGA
+2025-02-17 12:20:35 | INFO     | Successfully created transaction 1392973073CGA
+2025-02-17 12:20:35 | INFO     | CBS Warning for 1392973073CGA: Transaction completed Succesfully
+2025-02-17 12:20:35 | INFO     | Processing [14/21] MPESA ref: TB97FNZWKR
+2025-02-17 12:20:35 | INFO     | Processing main transaction for ref: 1392973431
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392973431
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392973431: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing charge transaction for ref: 1392973431CGA
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392973431CGA
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392973431CGA: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing [15/21] MPESA ref: TB97FOF3JV
+2025-02-17 12:20:36 | INFO     | Processing main transaction for ref: 1392974391
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392974391
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392974391: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing charge transaction for ref: 1392974391CGA
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392974391CGA
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392974391CGA: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing [16/21] MPESA ref: TB91FOS0BN
+2025-02-17 12:20:36 | INFO     | Processing main transaction for ref: 1392975164
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392975164
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392975164: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing charge transaction for ref: 1392975164CGA
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392975164CGA
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392975164CGA: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing [17/21] MPESA ref: TB91FOIIRT
+2025-02-17 12:20:36 | INFO     | Processing main transaction for ref: 1392974587
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392974587
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392974587: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing charge transaction for ref: 1392974587CGA
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1392974587CGA
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1392974587CGA: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing [18/21] MPESA ref: TAS0TX0VRU
+2025-02-17 12:20:36 | INFO     | Processing main transaction for ref: 1389512312
+2025-02-17 12:20:36 | INFO     | Successfully created transaction 1389512312
+2025-02-17 12:20:36 | INFO     | CBS Warning for 1389512312: Transaction completed Succesfully
+2025-02-17 12:20:36 | INFO     | Processing charge transaction for ref: 1389512312CGA
+2025-02-17 12:20:37 | INFO     | Successfully created transaction 1389512312CGA
+2025-02-17 12:20:37 | INFO     | CBS Warning for 1389512312CGA: Transaction completed Succesfully
+2025-02-17 12:20:37 | INFO     | Processing [19/21] MPESA ref: TB90FNRBBS
+2025-02-17 12:20:37 | INFO     | Processing main transaction for ref: 1392972919
+2025-02-17 12:20:37 | INFO     | Successfully created transaction 1392972919
+2025-02-17 12:20:37 | INFO     | CBS Warning for 1392972919: Transaction completed Succesfully
+2025-02-17 12:20:37 | INFO     | Processing charge transaction for ref: 1392972919CGA
+2025-02-17 12:20:37 | INFO     | Successfully created transaction 1392972919CGA
+2025-02-17 12:20:37 | INFO     | CBS Warning for 1392972919CGA: Transaction completed Succesfully
+2025-02-17 12:20:37 | INFO     | Processing [20/21] MPESA ref: TB90FNVY5W
+2025-02-17 12:20:37 | INFO     | Processing main transaction for ref: 1392973184
+2025-02-17 12:20:37 | INFO     | Successfully created transaction 1392973184
+2025-02-17 12:20:37 | INFO     | CBS Warning for 1392973184: Transaction completed Succesfully
+2025-02-17 12:20:37 | INFO     | Processing charge transaction for ref: 1392973184CGA
+2025-02-17 12:20:37 | INFO     | Successfully created transaction 1392973184CGA
+2025-02-17 12:20:37 | INFO     | CBS Warning for 1392973184CGA: Transaction completed Succesfully
+2025-02-17 12:20:37 | INFO     | Processing [21/21] MPESA ref: TB91FO6OYN
+2025-02-17 12:20:37 | INFO     | Processing main transaction for ref: 1392973858
+2025-02-17 12:20:37 | INFO     | Successfully created transaction 1392973858
+2025-02-17 12:20:37 | INFO     | CBS Warning for 1392973858: Transaction completed Succesfully
+2025-02-17 12:20:37 | INFO     | Processing charge transaction for ref: 1392973858CGA
+2025-02-17 12:20:37 | INFO     | Successfully created transaction 1392973858CGA
+2025-02-17 12:20:37 | INFO     | CBS Warning for 1392973858CGA: Transaction completed Succesfully
+2025-02-17 12:20:37 | INFO     | 
+==================================================
+2025-02-17 12:20:37 | INFO     | Batch Processing Summary
+2025-02-17 12:20:37 | INFO     | Total Processed: 21
+2025-02-17 12:20:37 | INFO     | Main Transactions:
+2025-02-17 12:20:37 | INFO     |   - Successful: 21
+2025-02-17 12:20:37 | INFO     |   - Duplicates: 0
+2025-02-17 12:20:37 | INFO     | Charge Transactions:
+2025-02-17 12:20:37 | INFO     |   - Successful: 21
+2025-02-17 12:20:37 | INFO     |   - Duplicates: 0
+2025-02-17 12:20:37 | INFO     | Failed Transactions: 0
+2025-02-17 12:20:37 | INFO     | ==================================================
+
+2025-02-17 12:20:37 | INFO     | 
+==================================================
+2025-02-17 12:20:37 | INFO     | Batch Processing Summary
+2025-02-17 12:20:37 | INFO     | Total Processed: 21
+2025-02-17 12:20:37 | INFO     | Main Transactions Successful: 21
+2025-02-17 12:20:37 | INFO     | Main Duplicates: 0
+2025-02-17 12:20:37 | INFO     | Charge Transactions Successful: 21
+2025-02-17 12:20:37 | INFO     | Charge Duplicates: 0
+2025-02-17 12:20:37 | INFO     | Failed: 0
+2025-02-17 12:20:37 | INFO     | ==================================================
+

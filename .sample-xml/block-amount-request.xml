@@ -1,0 +1,28 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSCustomerService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATEAMTBLK_FSFS_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>001</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSCustomerService</fcub:SERVICE>
+            <fcub:OPERATION>CreateAmtBlk</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Amount-Blocks-Full>
+               <fcub:ACC>0010172338</fcub:ACC>
+               <fcub:AMTBLKNO>TEST0001</fcub:AMTBLKNO>
+               <fcub:AMT>100</fcub:AMT>
+               <fcub:ABLKTYPE>F</fcub:ABLKTYPE>
+               <fcub:REFERENCE_NO>TEST001</fcub:REFERENCE_NO>
+               <fcub:HPCODE>MPESA</fcub:HPCODE>
+               <fcub:HOLDDESC>Blocked for transaction with reference TEST0001 </fcub:HOLDDESC>
+               <fcub:BRANCH>001</fcub:BRANCH>
+               <fcub:BENEFICIARY_TELEPHONE>254724441724</fcub:BENEFICIARY_TELEPHONE>
+            </fcub:Amount-Blocks-Full>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATEAMTBLK_FSFS_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>

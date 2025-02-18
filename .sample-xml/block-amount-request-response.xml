@@ -1,0 +1,55 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <CREATEAMTBLK_FSFS_RES xmlns="http://fcubs.ofss.com/service/FCUBSCustomerService">
+         <FCUBS_HEADER>
+            <SOURCE>SMFBPORTAL</SOURCE>
+            <UBSCOMP>FCUBS</UBSCOMP>
+            <MSGID>6125041000561330</MSGID>
+            <CORRELID>null</CORRELID>
+            <USERID>SYSTEM</USERID>
+            <ENTITY>null</ENTITY>
+            <BRANCH>001</BRANCH>
+            <MODULEID>CA</MODULEID>
+            <SERVICE>FCUBSCustomerService</SERVICE>
+            <OPERATION>CreateAmtBlk</OPERATION>
+            <DESTINATION>SMFBPORTAL</DESTINATION>
+            <FUNCTIONID>CADAMBLK</FUNCTIONID>
+            <ACTION>NEW</ACTION>
+            <MSGSTAT>SUCCESS</MSGSTAT>
+         </FCUBS_HEADER>
+         <FCUBS_BODY>
+            <Amount-Blocks-Full>
+               <ACC>0010172338</ACC>
+               <AMTBLKNO>TEST0001</AMTBLKNO>
+               <AMT>100</AMT>
+               <ABLKTYPE>F</ABLKTYPE>
+               <REFERENCE_NO>TEST001</REFERENCE_NO>
+               <HPCODE>MPESA</HPCODE>
+               <EFFDATE>2025-06-07</EFFDATE>
+               <HOLDDESC>MPESA TRANSFER HOLD</HOLDDESC>
+               <BRANCH>001</BRANCH>
+               <BENEFICIARY_TELEPHONE>254724441724</BENEFICIARY_TELEPHONE>
+               <VERIFY_AVL_BAL>N</VERIFY_AVL_BAL>
+               <SOURCE_CODE>SMFBPORTAL</SOURCE_CODE>
+               <MAKER>SYSTEM</MAKER>
+               <MAKERSTAMP>2025-06-07 08:32:24</MAKERSTAMP>
+               <CHECKER>SYSTEM</CHECKER>
+               <CHECKERSTAMP>2025-06-07 08:32:26</CHECKERSTAMP>
+               <MODNO>1</MODNO>
+               <TXNSTAT>O</TXNSTAT>
+               <AUTHSTAT>A</AUTHSTAT>
+            </Amount-Blocks-Full>
+            <FCUBS_WARNING_RESP>
+               <WARNING>
+                  <WCODE>CA-AB010</WCODE>
+                  <WDESC>System has defaulted the Effective Date to Today</WDESC>
+               </WARNING>
+               <WARNING>
+                  <WCODE>ST-SAVE-002</WCODE>
+                  <WDESC>Record Successfully Saved and Authorized</WDESC>
+               </WARNING>
+            </FCUBS_WARNING_RESP>
+         </FCUBS_BODY>
+      </CREATEAMTBLK_FSFS_RES>
+   </S:Body>
+</S:Envelope>

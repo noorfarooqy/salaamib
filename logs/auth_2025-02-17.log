@@ -1,0 +1,26 @@
+2025-02-17 11:51:12,222 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 11:51:12,447 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 11:51:18,531 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 11:51:18,533 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 11:51:31,192 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 11:51:31,193 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 11:51:36,605 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 11:51:36,608 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 11:51:44,284 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 11:51:44,286 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 11:51:58,548 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 11:51:58,550 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 11:52:06,075 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 11:52:06,077 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 12:58:32,458 - auth - INFO - Login attempt for CIF: mnoor@salaammfbank.co.ke
+2025-02-17 12:58:32,584 - auth - ERROR - Auth Error: User not found with CIF: mnoor@salaammfbank.co.ke
+2025-02-17 12:59:17,877 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 12:59:17,880 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 12:59:21,591 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 12:59:21,593 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 12:59:31,843 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 12:59:31,845 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 13:00:05,439 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 13:00:05,441 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com
+2025-02-17 13:00:22,892 - auth - INFO - Login attempt for CIF: admin@example.com
+2025-02-17 13:00:22,894 - auth - ERROR - Auth Error: User not found with CIF: admin@example.com

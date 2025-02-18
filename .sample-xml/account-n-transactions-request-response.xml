@@ -1,0 +1,110 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+   <S:Body>
+      <QUERYACCTRNS_IOFS_RES xmlns="http://fcubs.ofss.com/service/FCUBSACService">
+         <FCUBS_HEADER>
+            <SOURCE>SMFBPORTAL</SOURCE>
+            <UBSCOMP>FCUBS</UBSCOMP>
+            <MSGID>6125041000561329</MSGID>
+            <CORRELID>null</CORRELID>
+            <USERID>SYSTEM</USERID>
+            <ENTITY>null</ENTITY>
+            <BRANCH>001</BRANCH>
+            <MODULEID>AC</MODULEID>
+            <SERVICE>FCUBSACService</SERVICE>
+            <OPERATION>QueryAccTrns</OPERATION>
+            <DESTINATION>SMFBPORTAL</DESTINATION>
+            <FUNCTIONID>ACDACTRN</FUNCTIONID>
+            <ACTION>EXECUTEQUERY</ACTION>
+            <MSGSTAT>SUCCESS</MSGSTAT>
+         </FCUBS_HEADER>
+         <FCUBS_BODY>
+            <Acc-Details-Full>
+               <NUMOFTRN>5</NUMOFTRN>
+               <ACCNO>0010172338</ACCNO>
+               <ACCBRN>001</ACCBRN>
+               <BRNDESC>PARK PLAZA</BRNDESC>
+               <Acc-Transaction>
+                  <REFNO>001FTRQ251560003</REFNO>
+                  <ACBRN>001</ACBRN>
+                  <ACNO>0010172338</ACNO>
+                  <ACCCY>KES</ACCCY>
+                  <DRBRIND>C</DRBRIND>
+                  <TRNCD>FTR</TRNCD>
+                  <LCYAMT>3000</LCYAMT>
+                  <TRNDT>2025-06-05</TRNDT>
+                  <VALDT>2025-06-04</VALDT>
+                  <TXNINITDT>2025-06-05</TXNINITDT>
+                  <MOD>RT</MOD>
+                  <FINCYCLE>FY2025</FINCYCLE>
+                  <BRNDESC>PARK PLAZA</BRNDESC>
+                  <MODDESC>Retail Teller</MODDESC>
+               </Acc-Transaction>
+               <Acc-Transaction>
+                  <REFNO>001EMRP251580453</REFNO>
+                  <ACBRN>001</ACBRN>
+                  <ACNO>0010172338</ACNO>
+                  <ACCCY>KES</ACCCY>
+                  <DRBRIND>D</DRBRIND>
+                  <TRNCD>EMR</TRNCD>
+                  <LCYAMT>1900</LCYAMT>
+                  <TRNDT>2025-06-07</TRNDT>
+                  <VALDT>2025-06-07</VALDT>
+                  <TXNINITDT>2025-06-07</TXNINITDT>
+                  <MOD>RT</MOD>
+                  <FINCYCLE>FY2025</FINCYCLE>
+                  <BRNDESC>PARK PLAZA</BRNDESC>
+                  <MODDESC>Retail Teller</MODDESC>
+               </Acc-Transaction>
+               <Acc-Transaction>
+                  <REFNO>001EMRP251580453</REFNO>
+                  <ACBRN>001</ACBRN>
+                  <ACNO>0010172338</ACNO>
+                  <ACCCY>KES</ACCCY>
+                  <DRBRIND>D</DRBRIND>
+                  <TRNCD>EMR</TRNCD>
+                  <LCYAMT>31666.67</LCYAMT>
+                  <TRNDT>2025-06-07</TRNDT>
+                  <VALDT>2025-06-07</VALDT>
+                  <TXNINITDT>2025-06-07</TXNINITDT>
+                  <MOD>RT</MOD>
+                  <FINCYCLE>FY2025</FINCYCLE>
+                  <BRNDESC>PARK PLAZA</BRNDESC>
+                  <MODDESC>Retail Teller</MODDESC>
+               </Acc-Transaction>
+               <Acc-Transaction>
+                  <REFNO>001EMRB251583220</REFNO>
+                  <ACBRN>001</ACBRN>
+                  <ACNO>0010172338</ACNO>
+                  <ACCCY>KES</ACCCY>
+                  <DRBRIND>C</DRBRIND>
+                  <TRNCD>EMR</TRNCD>
+                  <LCYAMT>95000</LCYAMT>
+                  <TRNDT>2025-06-07</TRNDT>
+                  <VALDT>2025-06-07</VALDT>
+                  <TXNINITDT>2025-06-07</TXNINITDT>
+                  <MOD>RT</MOD>
+                  <FINCYCLE>FY2025</FINCYCLE>
+                  <BRNDESC>PARK PLAZA</BRNDESC>
+                  <MODDESC>Retail Teller</MODDESC>
+               </Acc-Transaction>
+               <Acc-Transaction>
+                  <REFNO>001UTFR251580033</REFNO>
+                  <ACBRN>001</ACBRN>
+                  <ACNO>0010172338</ACNO>
+                  <ACCCY>KES</ACCCY>
+                  <DRBRIND>D</DRBRIND>
+                  <TRNCD>UTF</TRNCD>
+                  <LCYAMT>1000</LCYAMT>
+                  <TRNDT>2025-06-07</TRNDT>
+                  <VALDT>2025-06-07</VALDT>
+                  <TXNINITDT>2025-06-07</TXNINITDT>
+                  <MOD>RT</MOD>
+                  <FINCYCLE>FY2025</FINCYCLE>
+                  <BRNDESC>PARK PLAZA</BRNDESC>
+                  <MODDESC>Retail Teller</MODDESC>
+               </Acc-Transaction>
+            </Acc-Details-Full>
+         </FCUBS_BODY>
+      </QUERYACCTRNS_IOFS_RES>
+   </S:Body>
+</S:Envelope>

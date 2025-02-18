@@ -1,0 +1,195 @@
+2025-02-17 11:51:12,448 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 11:51:18,533 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 11:51:31,194 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 11:51:36,609 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 11:51:44,287 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 11:51:58,551 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 11:52:06,077 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 12:58:32,586 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 12:59:17,880 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 12:59:21,594 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 12:59:31,846 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 13:00:05,442 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
+2025-02-17 13:00:22,895 - error - ERROR - Database error: 401: Incorrect CIF number or password
+Traceback (most recent call last):
+  File "C:\Users\Noor\AI\salaam-ib\app\db\base.py", line 24, in get_db
+    yield db
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\concurrency.py", line 27, in contextmanager_in_threadpool
+    yield await run_in_threadpool(cm.__enter__)
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Noor\AI\deepseer-r1-test\.conda\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Noor\AI\salaam-ib\app\api\v1\auth.py", line 182, in login
+    raise HTTPException(
+fastapi.exceptions.HTTPException: 401: Incorrect CIF number or password
