@@ -1,0 +1,2 @@
+2025-03-16 02:05:42,109 - account - INFO - Getting balance for account 0000000301
+2025-03-16 02:05:42,111 - account - ERROR - Failed to get CBS balance for account 0000000301

@@ -40,6 +40,15 @@ class User(Base):
     is_verified = Column(Boolean, default=False)
     cbs_is_verified = Column(Boolean, default=False)
     
+    # Login Security
+    login_attempts = Column(Integer, default=0)
+    is_locked = Column(Boolean, default=False)
+    locked_until = Column(DateTime(timezone=True), nullable=True)
+    
+    # OTP Security
+    otp_attempts = Column(Integer, default=0)
+    otp_locked_until = Column(DateTime(timezone=True), nullable=True)
+    
     # Timestamps
     last_login = Column(DateTime(timezone=True), nullable=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())

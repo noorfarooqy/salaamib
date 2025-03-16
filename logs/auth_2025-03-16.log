@@ -1,0 +1,271 @@
+2025-03-16 02:04:17,784 - auth - ERROR - Auth Error: Registration error: 400: User already registered
+2025-03-16 02:04:37,563 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 02:04:37,918 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 02:04:54,709 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 02:04:54,941 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 05:24:50,604 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 05:24:50,946 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 05:25:11,429 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 05:25:11,674 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 05:33:10,065 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 05:33:10,309 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 05:36:23,833 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 05:36:24,060 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 05:39:34,816 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 05:39:35,054 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 05:40:58,092 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 05:40:58,324 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 05:44:14,817 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 05:44:15,068 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:07:09,123 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:07:09,319 - auth - ERROR - Auth Error: Invalid password for CIF: 007129
+2025-03-16 06:07:13,876 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:07:14,074 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:08:21,079 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:08:21,323 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:09:02,039 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:09:02,301 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:10:48,013 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:10:48,245 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:12:55,541 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:12:55,800 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:13:53,040 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:13:53,299 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:15:33,841 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:15:34,251 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:36:14,042 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:36:14,337 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 06:41:34,650 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 06:41:35,017 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 07:03:19,726 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 07:03:20,027 - auth - ERROR - Auth Error: Invalid password for CIF: 007129
+2025-03-16 07:03:24,304 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 07:03:24,597 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 07:11:37,855 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 07:11:38,183 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 07:15:07,280 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 07:15:07,606 - auth - INFO - Login successful for CIF: 007129
+2025-03-16 07:17:08,064 - auth - INFO - Password reset OTP sent for user 007129
+2025-03-16 07:17:41,478 - auth - ERROR - Auth Error: Password reset failed for 007128: 404: User not found
+2025-03-16 07:18:09,091 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:18:40,088 - auth - INFO - Password reset OTP sent for user 007129
+2025-03-16 07:18:52,563 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:21:04,779 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:26:27,560 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:27:17,834 - auth - INFO - Password reset OTP sent for user 007129
+2025-03-16 07:27:39,766 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:29:11,580 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:29:16,087 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:30:53,552 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Invalid or expired OTP
+2025-03-16 07:33:06,611 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Expired or invalid OTP 
+2025-03-16 07:33:26,636 - auth - INFO - Resetting password for user with id 1 with OTP: 575274 and new password: password
+2025-03-16 07:33:26,641 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Expired or invalid OTP 
+2025-03-16 07:33:36,789 - auth - INFO - Password reset OTP sent for user 007129
+2025-03-16 07:33:51,331 - auth - INFO - Resetting password for user with id 1 with OTP: 268191 and new password: password
+2025-03-16 07:33:51,333 - auth - ERROR - Auth Error: Password reset failed for 007129: 400: Expired or invalid OTP 
+2025-03-16 07:37:06,796 - auth - INFO - Password reset OTP sent for user 007129
+2025-03-16 07:37:14,498 - auth - INFO - Password reset OTP sent for user 007129
+2025-03-16 07:37:33,349 - auth - INFO - Resetting password for user with id 1 with OTP: 326697 and new password: password
+2025-03-16 07:37:33,631 - auth - INFO - Password reset successful for user 007129
+2025-03-16 07:42:03,873 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 07:42:04,112 - auth - ERROR - Auth Error: Invalid password for CIF: 007129
+2025-03-16 07:42:15,423 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 07:42:15,734 - auth - ERROR - Auth Error: Invalid password for CIF: 007129
+2025-03-16 07:42:20,422 - auth - INFO - Login attempt for CIF: 007129
+2025-03-16 07:42:20,676 - auth - INFO - 2FA OTP sent for CIF: 007129
+2025-03-16 07:42:36,439 - auth - INFO - 2FA verification successful for CIF: 007129
+2025-03-16 07:48:03,858 - auth - ERROR - Auth Error: Login error for 007129: (psycopg2.errors.UndefinedColumn) column users.login_attempts does not exist
+LINE 1: ..., users.cbs_is_verified AS users_cbs_is_verified, users.logi...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.cif_number AS users_cif_number, users.hashed_password AS users_hashed_password, users.phone_number AS users_phone_number, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.gender AS users_gender, users.title AS users_title, users.short_name AS users_short_name, users.nationality AS users_nationality, users.address_line1 AS users_address_line1, users.address_line2 AS users_address_line2, users.address_line3 AS users_address_line3, users.address_line4 AS users_address_line4, users.address_country AS users_address_country, users.unique_id_name AS users_unique_id_name, users.unique_id_value AS users_unique_id_value, users.customer_type AS users_customer_type, users.category AS users_category, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.cbs_is_verified AS users_cbs_is_verified, users.login_attempts AS users_login_attempts, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.last_login AS users_last_login, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.cbs_created_at AS users_cbs_created_at, users.cbs_updated_at AS users_cbs_updated_at 
+FROM users 
+WHERE users.cif_number = %(cif_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'cif_number_1': '007129', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-16 07:48:59,467 - auth - ERROR - Auth Error: Login error for 007129: (psycopg2.errors.UndefinedColumn) column users.login_attempts does not exist
+LINE 1: ..., users.cbs_is_verified AS users_cbs_is_verified, users.logi...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.cif_number AS users_cif_number, users.hashed_password AS users_hashed_password, users.phone_number AS users_phone_number, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.gender AS users_gender, users.title AS users_title, users.short_name AS users_short_name, users.nationality AS users_nationality, users.address_line1 AS users_address_line1, users.address_line2 AS users_address_line2, users.address_line3 AS users_address_line3, users.address_line4 AS users_address_line4, users.address_country AS users_address_country, users.unique_id_name AS users_unique_id_name, users.unique_id_value AS users_unique_id_value, users.customer_type AS users_customer_type, users.category AS users_category, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.cbs_is_verified AS users_cbs_is_verified, users.login_attempts AS users_login_attempts, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.last_login AS users_last_login, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.cbs_created_at AS users_cbs_created_at, users.cbs_updated_at AS users_cbs_updated_at 
+FROM users 
+WHERE users.cif_number = %(cif_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'cif_number_1': '007129', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-16 07:51:30,964 - auth - ERROR - Auth Error: Login error for 007129: 'AuthLogger' object has no attribute 'warning'
+2025-03-16 07:54:15,905 - auth - INFO - Failed login attempt 2 for user 007129
+2025-03-16 07:56:54,667 - auth - INFO - Failed login attempt 3 for user 007129
+2025-03-16 07:57:26,368 - auth - INFO - Failed login attempt 4 for user 007129
+2025-03-16 07:57:32,170 - auth - INFO - Account locked due to max login attempts: 007129
+2025-03-16 07:58:06,373 - auth - INFO - Account locked due to max login attempts: 007129
+2025-03-16 07:58:28,575 - auth - INFO - Failed login attempt 1 for user 007129
+2025-03-16 07:58:40,225 - auth - INFO - Failed login attempt 2 for user 007129
+2025-03-16 07:58:51,617 - auth - INFO - Failed login attempt 3 for user 007129
+2025-03-16 07:58:53,554 - auth - INFO - Failed login attempt 4 for user 007129
+2025-03-16 07:58:55,086 - auth - INFO - Account locked due to max login attempts: 007129
+2025-03-16 07:59:06,486 - auth - INFO - Login attempt for locked account: 007129
+2025-03-16 07:59:34,578 - auth - INFO - Login attempt for locked account: 007129
+2025-03-16 07:59:41,955 - auth - INFO - Login attempt for locked account: 007129
+2025-03-16 08:00:04,108 - auth - INFO - Failed login attempt 1 for user 007129
+2025-03-16 08:00:15,199 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 08:01:09,979 - auth - INFO - 2FA verification successful for CIF: 007129
+2025-03-16 08:02:44,125 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 08:05:03,106 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 08:05:34,190 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 08:06:40,685 - auth - INFO - Resending OTP for CIF: 007129
+2025-03-16 08:06:40,689 - auth - ERROR - User 007129 is already verified
+2025-03-16 08:10:29,751 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 08:11:36,787 - auth - INFO - 2FA OTP resent for user 007129
+2025-03-16 08:11:57,919 - auth - INFO - 2FA verification successful for CIF: 007129
+2025-03-16 08:18:35,229 - auth - ERROR - Login error for 007129: (psycopg2.errors.UndefinedColumn) column users.otp_attempts does not exist
+LINE 1: ...locked, users.locked_until AS users_locked_until, users.otp_...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.cif_number AS users_cif_number, users.hashed_password AS users_hashed_password, users.phone_number AS users_phone_number, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.gender AS users_gender, users.title AS users_title, users.short_name AS users_short_name, users.nationality AS users_nationality, users.address_line1 AS users_address_line1, users.address_line2 AS users_address_line2, users.address_line3 AS users_address_line3, users.address_line4 AS users_address_line4, users.address_country AS users_address_country, users.unique_id_name AS users_unique_id_name, users.unique_id_value AS users_unique_id_value, users.customer_type AS users_customer_type, users.category AS users_category, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.cbs_is_verified AS users_cbs_is_verified, users.login_attempts AS users_login_attempts, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.otp_attempts AS users_otp_attempts, users.otp_locked_until AS users_otp_locked_until, users.last_login AS users_last_login, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.cbs_created_at AS users_cbs_created_at, users.cbs_updated_at AS users_cbs_updated_at 
+FROM users 
+WHERE users.cif_number = %(cif_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'cif_number_1': '007129', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-16 08:18:39,378 - auth - ERROR - Login error for 007129: (psycopg2.errors.UndefinedColumn) column users.otp_attempts does not exist
+LINE 1: ...locked, users.locked_until AS users_locked_until, users.otp_...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.cif_number AS users_cif_number, users.hashed_password AS users_hashed_password, users.phone_number AS users_phone_number, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.gender AS users_gender, users.title AS users_title, users.short_name AS users_short_name, users.nationality AS users_nationality, users.address_line1 AS users_address_line1, users.address_line2 AS users_address_line2, users.address_line3 AS users_address_line3, users.address_line4 AS users_address_line4, users.address_country AS users_address_country, users.unique_id_name AS users_unique_id_name, users.unique_id_value AS users_unique_id_value, users.customer_type AS users_customer_type, users.category AS users_category, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.cbs_is_verified AS users_cbs_is_verified, users.login_attempts AS users_login_attempts, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.otp_attempts AS users_otp_attempts, users.otp_locked_until AS users_otp_locked_until, users.last_login AS users_last_login, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.cbs_created_at AS users_cbs_created_at, users.cbs_updated_at AS users_cbs_updated_at 
+FROM users 
+WHERE users.cif_number = %(cif_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'cif_number_1': '007129', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-16 08:18:51,340 - auth - ERROR - Login error for 007129: (psycopg2.errors.UndefinedColumn) column users.otp_attempts does not exist
+LINE 1: ...locked, users.locked_until AS users_locked_until, users.otp_...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.cif_number AS users_cif_number, users.hashed_password AS users_hashed_password, users.phone_number AS users_phone_number, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.gender AS users_gender, users.title AS users_title, users.short_name AS users_short_name, users.nationality AS users_nationality, users.address_line1 AS users_address_line1, users.address_line2 AS users_address_line2, users.address_line3 AS users_address_line3, users.address_line4 AS users_address_line4, users.address_country AS users_address_country, users.unique_id_name AS users_unique_id_name, users.unique_id_value AS users_unique_id_value, users.customer_type AS users_customer_type, users.category AS users_category, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.cbs_is_verified AS users_cbs_is_verified, users.login_attempts AS users_login_attempts, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.otp_attempts AS users_otp_attempts, users.otp_locked_until AS users_otp_locked_until, users.last_login AS users_last_login, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.cbs_created_at AS users_cbs_created_at, users.cbs_updated_at AS users_cbs_updated_at 
+FROM users 
+WHERE users.cif_number = %(cif_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'cif_number_1': '007129', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-16 08:19:56,745 - auth - ERROR - Login error for 007129: (psycopg2.errors.UndefinedColumn) column users.otp_attempts does not exist
+LINE 1: ...locked, users.locked_until AS users_locked_until, users.otp_...
+                                                             ^
+
+[SQL: SELECT users.id AS users_id, users.cif_number AS users_cif_number, users.hashed_password AS users_hashed_password, users.phone_number AS users_phone_number, users.email AS users_email, users.first_name AS users_first_name, users.last_name AS users_last_name, users.gender AS users_gender, users.title AS users_title, users.short_name AS users_short_name, users.nationality AS users_nationality, users.address_line1 AS users_address_line1, users.address_line2 AS users_address_line2, users.address_line3 AS users_address_line3, users.address_line4 AS users_address_line4, users.address_country AS users_address_country, users.unique_id_name AS users_unique_id_name, users.unique_id_value AS users_unique_id_value, users.customer_type AS users_customer_type, users.category AS users_category, users.is_active AS users_is_active, users.is_verified AS users_is_verified, users.cbs_is_verified AS users_cbs_is_verified, users.login_attempts AS users_login_attempts, users.is_locked AS users_is_locked, users.locked_until AS users_locked_until, users.otp_attempts AS users_otp_attempts, users.otp_locked_until AS users_otp_locked_until, users.last_login AS users_last_login, users.created_at AS users_created_at, users.updated_at AS users_updated_at, users.cbs_created_at AS users_cbs_created_at, users.cbs_updated_at AS users_cbs_updated_at 
+FROM users 
+WHERE users.cif_number = %(cif_number_1)s 
+ LIMIT %(param_1)s]
+[parameters: {'cif_number_1': '007129', 'param_1': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-03-16 08:22:06,200 - auth - INFO - Failed login attempt 1 for user 007129
+2025-03-16 08:22:11,810 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 08:22:25,163 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 08:22:45,870 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 08:22:52,347 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 08:23:04,648 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 08:24:54,542 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 08:39:28,020 - auth - INFO - cbs validation: {'is_valid': True, 'customer_id': '007209', 'email': 'caalami33@gmail.com', 'first_name': 'SAID', 'last_name': 'AHMED', 'gender': 'M', 'title': 'MR', 'short_name': 'EP6748262SAID', 'address_line1': 'P.O.BOX 1405-00100', 'address_line2': '', 'address_line3': '', 'address_line4': 'NAIROBI,KENYA', 'address_country': 'KE', 'mobile': '254795559765', 'is_verified': 'V', 'nationality': '', 'unique_id_name': 'PASSPORT_NO', 'unique_id_value': 'EP6748262', 'created_at': '2023-01-23', 'updated_at': '2023-01-23', 'customer_type': 'I', 'category': 'INDIVIDUAL', 'accounts': [{'accountNumber': '0010172409', 'accountType': 'S', 'currency': 'KES', 'accountName': 'SAID HASHI AHMED', 'openDate': '2023-01-23', 'status': 'NORM', 'branch': '001', 'address': {'line1': 'P.O.BOX 1405-00100', 'line2': '', 'line3': '', 'city': 'NAIROBI,KENYA'}}]}
+2025-03-16 08:42:20,925 - auth - INFO - cbs validation: {'is_valid': True, 'customer_id': '007209', 'email': 'caalami33@gmail.com', 'first_name': 'SAID', 'last_name': 'AHMED', 'gender': 'M', 'title': 'MR', 'short_name': 'EP6748262SAID', 'address_line1': 'P.O.BOX 1405-00100', 'address_line2': '', 'address_line3': '', 'address_line4': 'NAIROBI,KENYA', 'address_country': 'KE', 'mobile': '254795559765', 'is_verified': 'V', 'nationality': '', 'unique_id_name': 'PASSPORT_NO', 'unique_id_value': 'EP6748262', 'created_at': '2023-01-23', 'updated_at': '2023-01-23', 'customer_type': 'I', 'category': 'INDIVIDUAL', 'accounts': [{'accountNumber': '0010172409', 'accountType': 'S', 'currency': 'KES', 'accountName': 'SAID HASHI AHMED', 'openDate': '2023-01-23', 'status': 'NORM', 'branch': '001', 'address': {'line1': 'P.O.BOX 1405-00100', 'line2': '', 'line3': '', 'city': 'NAIROBI,KENYA'}}]}
+2025-03-16 08:43:36,406 - auth - INFO - Resending OTP for CIF: 007209
+2025-03-16 08:43:36,417 - auth - INFO - New OTP sent to user 007209
+2025-03-16 08:45:40,354 - auth - INFO - cbs validation: {'is_valid': True, 'customer_id': '007209', 'email': 'caalami33@gmail.com', 'first_name': 'SAID', 'last_name': 'AHMED', 'gender': 'M', 'title': 'MR', 'short_name': 'EP6748262SAID', 'address_line1': 'P.O.BOX 1405-00100', 'address_line2': '', 'address_line3': '', 'address_line4': 'NAIROBI,KENYA', 'address_country': 'KE', 'mobile': '254795559765', 'is_verified': 'V', 'nationality': '', 'unique_id_name': 'PASSPORT_NO', 'unique_id_value': 'EP6748262', 'created_at': '2023-01-23', 'updated_at': '2023-01-23', 'customer_type': 'I', 'category': 'INDIVIDUAL', 'accounts': [{'accountNumber': '0010172409', 'accountType': 'S', 'currency': 'KES', 'accountName': 'SAID HASHI AHMED', 'openDate': '2023-01-23', 'status': 'NORM', 'branch': '001', 'address': {'line1': 'P.O.BOX 1405-00100', 'line2': '', 'line3': '', 'city': 'NAIROBI,KENYA'}}]}
+2025-03-16 08:46:01,324 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 08:46:01,327 - auth - INFO - Found user with ID: 4
+2025-03-16 08:46:01,334 - auth - INFO - Found OTP record: valid until 2025-03-16 08:50:40.637489+03:00, is_used: False
+2025-03-16 08:46:01,359 - auth - ERROR - OTP code mismatch. Expected: 634284, Got: 635655
+2025-03-16 08:48:48,336 - auth - ERROR - Registration error: 400: User already registered
+2025-03-16 08:49:24,741 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 08:49:32,448 - auth - INFO - 2FA verification successful for CIF: 007209
+2025-03-16 08:53:27,248 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 08:53:52,288 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 08:56:31,943 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 08:56:52,784 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 08:56:52,786 - auth - INFO - Found user with ID: 4
+2025-03-16 08:56:52,790 - auth - INFO - Found OTP record: valid until 2025-03-16 09:01:31.943351+03:00, is_used: False
+2025-03-16 08:56:52,795 - auth - INFO - User 007209 verified successfully
+2025-03-16 09:01:17,748 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 09:01:17,925 - auth - INFO - Found user with ID: 4
+2025-03-16 09:01:17,931 - auth - ERROR - No unused OTP found for user ID: 4
+2025-03-16 09:01:21,776 - auth - INFO - Resending OTP for CIF: 007209
+2025-03-16 09:01:21,779 - auth - ERROR - User 007209 is already verified
+2025-03-16 09:01:41,120 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 09:04:43,572 - auth - INFO - cbs validation: {'is_valid': True, 'customer_id': '007209', 'email': 'caalami33@gmail.com', 'first_name': 'SAID', 'last_name': 'AHMED', 'gender': 'M', 'title': 'MR', 'short_name': 'EP6748262SAID', 'address_line1': 'P.O.BOX 1405-00100', 'address_line2': '', 'address_line3': '', 'address_line4': 'NAIROBI,KENYA', 'address_country': 'KE', 'mobile': '254795559765', 'is_verified': 'V', 'nationality': '', 'unique_id_name': 'PASSPORT_NO', 'unique_id_value': 'EP6748262', 'created_at': '2023-01-23', 'updated_at': '2023-01-23', 'customer_type': 'I', 'category': 'INDIVIDUAL', 'accounts': [{'accountNumber': '0010172409', 'accountType': 'S', 'currency': 'KES', 'accountName': 'SAID HASHI AHMED', 'openDate': '2023-01-23', 'status': 'NORM', 'branch': '001', 'address': {'line1': 'P.O.BOX 1405-00100', 'line2': '', 'line3': '', 'city': 'NAIROBI,KENYA'}}]}
+2025-03-16 09:04:52,522 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 09:04:52,526 - auth - INFO - Found user with ID: 5
+2025-03-16 09:04:52,533 - auth - INFO - Found OTP record: valid until 2025-03-16 09:09:43.851428+03:00, is_used: False
+2025-03-16 09:04:52,544 - auth - INFO - User 007209 verified successfully
+2025-03-16 09:05:06,138 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 09:09:51,205 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 09:12:26,819 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:17:32,659 - auth - INFO - Failed login attempt 1 for user 007129
+2025-03-16 09:17:38,872 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:23:09,486 - auth - INFO - Failed login attempt 1 for user 007129
+2025-03-16 09:23:13,783 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:26:26,823 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:29:32,596 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:29:38,294 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 09:30:02,441 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:30:08,610 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 09:31:10,616 - auth - INFO - Failed login attempt 1 for user 007129
+2025-03-16 09:31:15,749 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:31:19,999 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 09:31:46,051 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:31:57,999 - auth - ERROR - OTP verification locked for user 007129
+2025-03-16 09:32:23,775 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:32:35,922 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:35:03,165 - auth - INFO - 2FA verification successful for CIF: 007129
+2025-03-16 09:35:51,734 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 09:52:33,770 - auth - INFO - Failed login attempt 1 for user 007129
+2025-03-16 09:52:40,993 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 09:52:51,391 - auth - INFO - 2FA verification successful for CIF: 007129
+2025-03-16 09:53:02,620 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 09:58:40,901 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 10:03:10,699 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 10:03:17,216 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 10:03:17,219 - auth - INFO - Found user with ID: 5
+2025-03-16 10:03:17,226 - auth - INFO - Found OTP record: valid until 2025-03-16 10:08:10.700471+03:00, is_used: False
+2025-03-16 10:03:17,238 - auth - ERROR - OTP code mismatch. Expected: 064809, Got: 111111
+2025-03-16 10:03:30,891 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 10:03:30,894 - auth - INFO - Found user with ID: 5
+2025-03-16 10:03:30,896 - auth - INFO - Found OTP record: valid until 2025-03-16 10:08:10.700471+03:00, is_used: False
+2025-03-16 10:03:30,921 - auth - INFO - User 007209 verified successfully
+2025-03-16 10:03:30,937 - auth - ERROR - Login failed: User not found for CIF undefined
+2025-03-16 10:07:20,387 - auth - ERROR - Login failed: User not found for CIF undefined
+2025-03-16 10:07:34,450 - auth - ERROR - Login failed: User not found for CIF undefined
+2025-03-16 10:08:14,887 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 10:08:22,470 - auth - INFO - 2FA verification successful for CIF: 007209
+2025-03-16 10:08:53,197 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 10:09:04,699 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 10:09:04,701 - auth - INFO - Found user with ID: 5
+2025-03-16 10:09:04,705 - auth - INFO - Found OTP record: valid until 2025-03-16 10:13:53.197618+03:00, is_used: False
+2025-03-16 10:09:04,712 - auth - INFO - User 007209 verified successfully
+2025-03-16 10:09:04,974 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 10:10:39,047 - auth - ERROR - Login attempt by unverified user: 007209
+2025-03-16 10:11:02,912 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 10:11:02,916 - auth - INFO - Found user with ID: 5
+2025-03-16 10:11:02,918 - auth - INFO - Found OTP record: valid until 2025-03-16 10:15:39.047817+03:00, is_used: False
+2025-03-16 10:11:02,923 - auth - ERROR - OTP code mismatch. Expected: 168738, Got: 168555
+2025-03-16 10:11:14,317 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 10:11:14,320 - auth - INFO - Found user with ID: 5
+2025-03-16 10:11:14,322 - auth - INFO - Found OTP record: valid until 2025-03-16 10:15:39.047817+03:00, is_used: False
+2025-03-16 10:11:14,351 - auth - INFO - User 007209 verified successfully
+2025-03-16 10:11:14,645 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 10:11:32,335 - auth - INFO - 2FA verification successful for CIF: 007209
+2025-03-16 10:12:41,500 - auth - INFO - cbs validation: {'is_valid': True, 'customer_id': '007209', 'email': 'caalami33@gmail.com', 'first_name': 'SAID', 'last_name': 'AHMED', 'gender': 'M', 'title': 'MR', 'short_name': 'EP6748262SAID', 'address_line1': 'P.O.BOX 1405-00100', 'address_line2': '', 'address_line3': '', 'address_line4': 'NAIROBI,KENYA', 'address_country': 'KE', 'mobile': '254795559765', 'is_verified': 'V', 'nationality': '', 'unique_id_name': 'PASSPORT_NO', 'unique_id_value': 'EP6748262', 'created_at': '2023-01-23', 'updated_at': '2023-01-23', 'customer_type': 'I', 'category': 'INDIVIDUAL', 'accounts': [{'accountNumber': '0010172409', 'accountType': 'S', 'currency': 'KES', 'accountName': 'SAID HASHI AHMED', 'openDate': '2023-01-23', 'status': 'NORM', 'branch': '001', 'address': {'line1': 'P.O.BOX 1405-00100', 'line2': '', 'line3': '', 'city': 'NAIROBI,KENYA'}}]}
+2025-03-16 10:12:50,146 - auth - INFO - Verifying registration for CIF: 007209
+2025-03-16 10:12:50,149 - auth - INFO - Found user with ID: 6
+2025-03-16 10:12:50,151 - auth - INFO - Found OTP record: valid until 2025-03-16 10:17:41.740962+03:00, is_used: False
+2025-03-16 10:12:50,158 - auth - INFO - User 007209 verified successfully
+2025-03-16 10:13:01,352 - auth - INFO - 2FA OTP sent for user 007209
+2025-03-16 10:13:07,926 - auth - INFO - 2FA verification successful for CIF: 007209
+2025-03-16 10:32:32,607 - auth - INFO - Password reset OTP sent for user 007209
+2025-03-16 10:34:08,035 - auth - INFO - Password reset OTP sent for user 007209
+2025-03-16 10:41:41,104 - auth - INFO - Password reset OTP sent for user 007209
+2025-03-16 10:44:39,510 - auth - INFO - Password reset OTP sent for user 007209
+2025-03-16 10:54:55,482 - auth - INFO - Password reset OTP sent for user 007209
+2025-03-16 11:02:03,620 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 11:02:10,071 - auth - INFO - 2FA verification successful for CIF: 007129
+2025-03-16 14:39:45,991 - auth - INFO - 2FA OTP sent for user 007129
+2025-03-16 14:39:53,294 - auth - INFO - 2FA verification successful for CIF: 007129

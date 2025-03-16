@@ -72,6 +72,15 @@ class UserResponse(UserBase):
 class Token(BaseModel):
     access_token: str
     token_type: str = "bearer"
+    user: UserResponse
 
 class TokenData(BaseModel):
-    cif_number: str 
+    cif_number: str
+
+class ForgotPassword(BaseModel):
+    cif_number: str
+
+class ResetPassword(BaseModel):
+    cif_number: str
+    otp: str
+    new_password: str 

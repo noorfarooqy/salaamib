@@ -20,11 +20,11 @@ def get_db() -> Generator:
     """Database dependency that ensures proper session management"""
     db = SessionLocal()
     try:
-        db_logger.info("Opening new database connection")
+        db_logger.log_info("Opening new database connection")
         yield db
     except Exception as e:
-        error_logger.error(f"Database error: {str(e)}", exc_info=True)
+        error_logger.log_error(f"Database error: {str(e)}", exc_info=True)
         raise
     finally:
-        db_logger.info("Closing database connection")
+        db_logger.log_info("Closing database connection")
         db.close()

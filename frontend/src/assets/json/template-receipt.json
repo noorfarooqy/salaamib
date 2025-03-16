@@ -1,0 +1,26 @@
+[
+    {
+      "href": "cashreceipt-1",
+      "imgSrc": "cash-receipt-1.svg",
+      "invoiceTitle": "Receipt Invoice 1",
+      "data_bs_target": "#receipt_invoice_one"
+    },
+    {
+      "href": "cashreceipt-2",
+      "imgSrc": "cash-receipt-2.svg",
+      "invoiceTitle": "Receipt Invoice 2",
+      "data_bs_target": "#receipt_invoice_two"
+    },
+    {
+      "href": "cashreceipt-3",
+      "imgSrc": "cash-receipt-3.svg",
+      "invoiceTitle": "Receipt Invoice 3",
+      "data_bs_target": "#receipt_invoice_three"
+    },
+    {
+      "href": "cashreceipt-4",
+      "imgSrc": "cash-receipt-4.svg",
+      "invoiceTitle": "Receipt Invoice 4",
+      "data_bs_target": "#receipt_invoice_four"
+    }
+  ]

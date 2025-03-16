@@ -1,0 +1,129 @@
+[
+  {
+    "title": "Main",
+    "menu": [
+      {
+        "menuValue": "Dashboard",
+        "route": "/dashboard",
+        "hasSubRoute": true,
+        "showSubRoute": false,
+        "icon": "home",
+        "active_link": "dashboard",
+        "subMenus": [
+          {
+            "menuValue": "Overview",
+            "route": "/dashboard",
+            "active_link": "/dashboard"
+          },
+          {
+            "menuValue": "Account Summary",
+            "route": "/dashboard/summary",
+            "active_link": "/dashboard/summary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Account Transactions",
+    "menu": [
+      {
+        "menuValue": "Accounts",
+        "route": "/accounts",
+        "hasSubRoute": true,
+        "showSubRoute": false,
+        "icon": "credit-card",
+        "active_link": "accounts",
+        "subMenus": [
+          {
+            "menuValue": "My Accounts",
+            "route": "/accounts",
+            "active_link": "/accounts"
+          },
+          {
+            "menuValue": "Account Details",
+            "route": "/accounts/details",
+            "active_link": "/accounts/details"
+          },
+          {
+            "menuValue": "Transaction History",
+            "route": "/accounts/transactions",
+            "active_link": "/accounts/transactions"
+          }
+        ]
+      },
+      {
+        "menuValue": "Transfers",
+        "route": "/transfers",
+        "hasSubRoute": true,
+        "showSubRoute": false,
+        "icon": "send",
+        "active_link": "transfers",
+        "subMenus": [
+          {
+            "menuValue": "Internal Transfer",
+            "route": "/transfers/internal",
+            "active_link": "/transfers/internal"
+          },
+          {
+            "menuValue": "RTGS Transfer",
+            "route": "/transfers/rtgs",
+            "active_link": "/transfers/rtgs"
+          },
+          {
+            "menuValue": "Swift Transfer",
+            "route": "/transfers/swift",
+            "active_link": "/transfers/swift"
+          },
+          {
+            "menuValue": "Mobile Money",
+            "route": "/transfers/mobile",
+            "active_link": "/transfers/mobile"
+          },
+          {
+            "menuValue": "Transfer History",
+            "route": "/transfers/history",
+            "active_link": "/transfers/history"
+          },
+          {
+            "menuValue": "Beneficiaries",
+            "route": "/transfers/beneficiaries",
+            "active_link": "/transfers/beneficiaries"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Settings",
+    "menu": [
+      {
+        "menuValue": "Profile",
+        "route": "/profile",
+        "hasSubRoute": true,
+        "showSubRoute": false,
+        "icon": "user",
+        "active_link": "profile",
+        "subMenus": [
+          {
+            "menuValue": "Personal Information",
+            "route": "/profile",
+            "active_link": "/profile"
+          },
+          {
+            "menuValue": "Change Password",
+            "route": "/profile/password",
+            "active_link": "/profile/password"
+          }
+        ]
+      },
+      {
+        "menuValue": "Support",
+        "route": "/support",
+        "hasSubRoute": false,
+        "icon": "help-circle",
+        "active_link": "support"
+      }
+    ]
+  }
+]

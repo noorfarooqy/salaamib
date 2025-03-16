@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "Class": "packages card active",
+        "Image": "basic.svg",
+        "Title": "Basic",
+        "Days": "36 days remaining",
+        "Cancel": "Cancel Subscription",
+        "Rate": "$49.99",
+        "Total": "Monthly"
+    },
+    {
+        "id": "2",
+        "Class": "packages card",
+        "Image": "enterprise.svg",
+        "Title": "ENTERPRISES",
+        "Days": "365 days remaining",
+        "Cancel": "Upgrade",
+        "Rate": "$199.99",
+        "Total": "Yearly"
+    },
+    {
+        "id": "3",
+        "Class": "packages card",
+        "Image": "basic.svg",
+        "Title": "Basic",
+        "Days": "36 days remaining",
+        "Cancel": "Cancel Subscription",
+        "Rate": "$49.99",
+        "Total": "Monthly"
+    },
+    {
+        "id": "4",
+        "Class": "packages card",
+        "Image": "enterprise.svg",
+        "Title": "ENTERPRISES",
+        "Days": "365 days remaining",
+        "Cancel": "Upgrade",
+        "Rate": "$199.99",
+        "Total": "Yearly"
+    }
+]

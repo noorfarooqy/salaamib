@@ -1,9 +1,9 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.openapi.utils import get_openapi
 from app.core.config import settings
-from app.api.v1 import auth, accounts, transfers
+from app.api.v1 import auth, accounts, transfers, docs
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -29,6 +29,7 @@ app.add_middleware(
 app.include_router(auth.router, prefix=settings.API_V1_PREFIX + "/auth", tags=["Authentication"])
 app.include_router(accounts.router, prefix=settings.API_V1_PREFIX + "/accounts", tags=["Accounts"])
 app.include_router(transfers.router, prefix=settings.API_V1_PREFIX + "/transfers", tags=["Transfers"])
+app.include_router(docs.router, prefix=settings.API_V1_PREFIX + "/docs", tags=["Documentation"])
 
 @app.get("/")
 async def root():
