@@ -1,0 +1,293 @@
+2025-03-25 17:18:52 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 17:18:52 | INFO     | Environment: UAT, CBS URL: http://10.54.66.10:7701/FCUBSRTService/FCUBSRTService
+2025-03-25 17:18:52 | INFO     | Loaded 1 transactions
+2025-03-25 17:18:52 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 17:18:52 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>MPESA2024001</fcub:XREF>
+               <fcub:PRD>UB2c</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0010172338</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>5000.00</fcub:TXNAMT>
+               <fcub:NARRATIVE>MPESA SETTLEMENT FOR TXN123456</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 17:18:52 | INFO     | Processing transaction for ref: MPESA2024001
+2025-03-25 17:18:52 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084006521525</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>FAILURE</MSGSTAT></FCUBS_HEADER><FCUBS_BODY/></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 17:18:52 | ERROR    | Transaction failed with status: FAILURE
+2025-03-25 17:18:52 | ERROR    | Error: None - None
+2025-03-25 17:18:52 | INFO     | Response: {'status': 'FAILURE', 'error_code': None, 'error_description': None, 'fcc_ref': None}
+2025-03-25 17:18:52 | INFO     | Results written to mpesa_settlement_results_20250325_171852.txt
+2025-03-25 17:18:52 | INFO     | Processing complete. Summary: Total: 1, Success: 0, Duplicate: 0, Failed: 1, Unknown: 0
+2025-03-25 17:27:29 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 17:27:29 | INFO     | Environment: UAT, CBS URL: http://10.54.66.10:7701/FCUBSRTService/FCUBSRTService
+2025-03-25 17:27:29 | INFO     | Loaded 1 transactions
+2025-03-25 17:27:29 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 17:27:29 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>MPESA2024001</fcub:XREF>
+               <fcub:PRD>UB2C</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0010172338</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>5000.00</fcub:TXNAMT>
+               <fcub:NARRATIVE>MPESA SETTLEMENT FOR TXN123456</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 17:27:29 | INFO     | Processing transaction for ref: MPESA2024001
+2025-03-25 17:27:34 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084006521534</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>SUCCESS</MSGSTAT></FCUBS_HEADER><FCUBS_BODY><FCUBS_WARNING_RESP><WARNING><WCODE>GW-SAV-03</WCODE><WDESC>Transaction completed Successfully</WDESC></WARNING></FCUBS_WARNING_RESP></FCUBS_BODY></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 17:27:34 | INFO     | Response: {'status': 'SUCCESS', 'warning_code': 'GW-SAV-03', 'warning_description': 'Transaction completed Successfully', 'fcc_ref': None}
+2025-03-25 17:27:34 | INFO     | Results written to mpesa_settlement_results_20250325_172729.txt
+2025-03-25 17:27:34 | INFO     | Processing complete. Summary: Total: 1, Success: 1, Duplicate: 0, Failed: 0, Unknown: 0
+2025-03-25 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 | INFO     | Environment: UAT, CBS URL: http://10.54.66.10:7701/FCUBSRTService/FCUBSRTService
+2025-03-25 | INFO     | Loaded 1 transactions
+2025-03-25 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>MPESA2024001</fcub:XREF>
+               <fcub:PRD>UB2C</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0010172338</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>5000.00</fcub:TXNAMT>
+               <fcub:NARRATIVE>MPESA SETTLEMENT FOR TXN123456</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 | INFO     | Processing transaction for ref: MPESA2024001
+2025-03-25 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084006521535</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>FAILURE</MSGSTAT></FCUBS_HEADER><FCUBS_BODY><FCUBS_ERROR_RESP><ERROR><ECODE>GW-RTL-008</ECODE><EDESC>Duplication External Reference No(MPESA2024001) received in the request.</EDESC></ERROR></FCUBS_ERROR_RESP></FCUBS_BODY></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 | INFO     | Duplicate transaction detected: Duplication External Reference No(MPESA2024001) received in the request.
+2025-03-25 | INFO     | Response: {'status': 'DUPLICATE', 'error_code': 'GW-RTL-008', 'error_description': 'Duplication External Reference No(MPESA2024001) received in the request.', 'fcc_ref': 'MPESA2024001'}
+2025-03-25 | INFO     | Results written to mpesa_settlement_results_20250325_172826.txt
+2025-03-25 | INFO     | Processing complete. Summary: Total: 1, Success: 0, Duplicate: 1, Failed: 0, Unknown: 0
+2025-03-25 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 | INFO     | Environment: UAT, CBS URL: http://10.54.66.10:7701/FCUBSRTService/FCUBSRTService
+2025-03-25 | INFO     | Loaded 1 transactions
+2025-03-25 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>MPESA2024001</fcub:XREF>
+               <fcub:PRD>UB2C</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0010172338</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>5000.00</fcub:TXNAMT>
+               <fcub:NARRATIVE>MPESA SETTLEMENT FOR TXN123456</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 | INFO     | Processing transaction for ref: MPESA2024001
+2025-03-25 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084006521536</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>FAILURE</MSGSTAT></FCUBS_HEADER><FCUBS_BODY><FCUBS_ERROR_RESP><ERROR><ECODE>GW-RTL-008</ECODE><EDESC>Duplication External Reference No(MPESA2024001) received in the request.</EDESC></ERROR></FCUBS_ERROR_RESP></FCUBS_BODY></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 | INFO     | Duplicate transaction detected: Duplication External Reference No(MPESA2024001) received in the request.
+2025-03-25 | INFO     | Response: {'status': 'DUPLICATE', 'error_code': 'GW-RTL-008', 'error_description': 'Duplication External Reference No(MPESA2024001) received in the request.', 'fcc_ref': 'MPESA2024001'}
+2025-03-25 | INFO     | Results written to mpesa_settlement_results_20250325_172833.txt
+2025-03-25 | INFO     | Processing complete. Summary: Total: 1, Success: 0, Duplicate: 1, Failed: 0, Unknown: 0
+2025-03-25 17:29:39 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 17:29:39 | INFO     | Environment: UAT, CBS URL: http://10.54.66.10:7701/FCUBSRTService/FCUBSRTService
+2025-03-25 17:29:39 | INFO     | Loaded 1 transactions
+2025-03-25 17:29:39 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 17:29:39 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>MPESA2024002</fcub:XREF>
+               <fcub:PRD>UB2C</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0010172338</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>5000.00</fcub:TXNAMT>
+               <fcub:NARRATIVE>MPESA SETTLEMENT FOR TXN123456</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 17:29:39 | INFO     | Processing transaction for ref: MPESA2024002
+2025-03-25 17:29:39 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084006521537</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>SUCCESS</MSGSTAT></FCUBS_HEADER><FCUBS_BODY><FCUBS_WARNING_RESP><WARNING><WCODE>GW-SAV-03</WCODE><WDESC>Transaction completed Successfully</WDESC></WARNING></FCUBS_WARNING_RESP></FCUBS_BODY></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 17:29:40 | INFO     | Response: {'status': 'SUCCESS', 'warning_code': 'GW-SAV-03', 'warning_description': 'Transaction completed Successfully', 'fcc_ref': None}
+2025-03-25 17:29:40 | INFO     | Results written to mpesa_settlement_results_20250325.txt
+2025-03-25 17:29:40 | INFO     | Processing complete. Summary: Total: 1, Success: 1, Duplicate: 0, Failed: 0, Unknown: 0
+2025-03-25 18:20:21 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 18:20:21 | INFO     | Environment: PROD, CBS URL: http://10.54.12.70:7004/FCUBSRTService/FCUBSRTService
+2025-03-25 18:20:21 | INFO     | Loaded 1 transactions
+2025-03-25 18:20:21 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 18:20:21 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>TB866XBFP6</fcub:XREF>
+               <fcub:PRD>UB2C</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0020001803</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>122.20</fcub:TXNAMT>
+               <fcub:NARRATIVE>MOBILE MONEY: MPESA REF: TB866XBFP6 - 254705825346  - ESB20250227443750</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 18:20:21 | INFO     | Processing transaction for ref: TB866XBFP6
+2025-03-25 18:20:21 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084007125303</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>SUCCESS</MSGSTAT></FCUBS_HEADER><FCUBS_BODY><FCUBS_WARNING_RESP><WARNING><WCODE>AC-OVD05</WCODE><WDESC>Available Balance 875.94 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class</WDESC></WARNING><WARNING><WCODE>AC-OVD05</WCODE><WDESC>Available Balance 998.14 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class</WDESC></WARNING><WARNING><WCODE>GW-SAV-03</WCODE><WDESC>Transaction completed Successfully</WDESC></WARNING></FCUBS_WARNING_RESP></FCUBS_BODY></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 18:20:21 | INFO     | Response: {'status': 'SUCCESS', 'warning_code': 'AC-OVD05', 'warning_description': 'Available Balance 875.94 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class', 'fcc_ref': None}
+2025-03-25 18:20:21 | INFO     | Results written to mpesa_settlement_results_20250325.txt
+2025-03-25 18:20:21 | INFO     | Processing complete. Summary: Total: 1, Success: 1, Duplicate: 0, Failed: 0, Unknown: 0
+2025-03-25 18:22:29 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 18:22:29 | INFO     | Environment: PROD, CBS URL: http://10.54.12.70:7004/FCUBSRTService/FCUBSRTService
+2025-03-25 18:22:29 | INFO     | Loaded 1 transactions
+2025-03-25 18:22:29 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 18:22:29 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>TB866XBFP6</fcub:XREF>
+               <fcub:PRD>UB2C</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0020001803</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>122.20</fcub:TXNAMT>
+               <fcub:NARRATIVE>MOBILE MONEY: MPESA REF: TB866XBFP6 - 254705825346  - ESB20250227443750</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 18:22:29 | INFO     | Processing transaction for ref: TB866XBFP6
+2025-03-25 18:22:29 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084007125324</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>FAILURE</MSGSTAT></FCUBS_HEADER><FCUBS_BODY><FCUBS_ERROR_RESP><ERROR><ECODE>GW-RTL-008</ECODE><EDESC>Duplication External Reference No(TB866XBFP6) received in the request.</EDESC></ERROR></FCUBS_ERROR_RESP></FCUBS_BODY></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 18:22:29 | INFO     | Duplicate transaction detected: Duplication External Reference No(TB866XBFP6) received in the request.
+2025-03-25 18:22:29 | INFO     | Response: {'status': 'DUPLICATE', 'error_code': 'GW-RTL-008', 'error_description': 'Duplication External Reference No(TB866XBFP6) received in the request.', 'fcc_ref': 'TB866XBFP6'}
+2025-03-25 18:22:29 | INFO     | Results written to mpesa_settlement_results_20250325.txt
+2025-03-25 18:22:29 | INFO     | Processing complete. Summary: Total: 1, Success: 0, Duplicate: 1, Failed: 0, Unknown: 0
+2025-03-25 18:22:57 | INFO     | Starting MPESA settlement processing from file: mpesa_transactions_sample.txt
+2025-03-25 18:22:57 | INFO     | Environment: PROD, CBS URL: http://10.54.12.70:7004/FCUBSRTService/FCUBSRTService
+2025-03-25 18:22:57 | INFO     | Loaded 1 transactions
+2025-03-25 18:22:57 | INFO     | Processing transactions with max concurrency: 5
+2025-03-25 18:22:57 | INFO     | SOAP Request: <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <fcub:CREATETRANSACTION_IOPK_REQ>
+         <fcub:FCUBS_HEADER>
+            <fcub:SOURCE>SMFBPORTAL</fcub:SOURCE>
+            <fcub:UBSCOMP>FCUBS</fcub:UBSCOMP>
+            <fcub:USERID>SYSTEM</fcub:USERID>
+            <fcub:BRANCH>002</fcub:BRANCH>
+            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
+            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
+         </fcub:FCUBS_HEADER>
+         <fcub:FCUBS_BODY>
+            <fcub:Transaction-Details-IO>
+               <fcub:XREF>TB866XBFP6-R</fcub:XREF>
+               <fcub:PRD>UB2C</fcub:PRD>
+               <fcub:BRN>002</fcub:BRN>
+               <fcub:TXNBRN>002</fcub:TXNBRN>
+               <fcub:TXNACC>0020001803</fcub:TXNACC>
+               <fcub:TXNCCY>KES</fcub:TXNCCY>
+               <fcub:TXNAMT>122.20</fcub:TXNAMT>
+               <fcub:NARRATIVE>MOBILE MONEY: MPESA REF: TB866XBFP6 - 254705825346  - ESB20250227443750</fcub:NARRATIVE>
+            </fcub:Transaction-Details-IO>
+         </fcub:FCUBS_BODY>
+      </fcub:CREATETRANSACTION_IOPK_REQ>
+   </soapenv:Body>
+</soapenv:Envelope>
+2025-03-25 18:22:57 | INFO     | Processing transaction for ref: TB866XBFP6-R
+2025-03-25 18:22:57 | INFO     | Parsing response: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><CREATETRANSACTION_IOPK_RES xmlns="http://fcubs.ofss.com/service/FCUBSRTService"><FCUBS_HEADER><SOURCE>SMFBPORTAL</SOURCE><UBSCOMP>FCUBS</UBSCOMP><MSGID>6125084007125327</MSGID><CORRELID>null</CORRELID><USERID>SYSTEM</USERID><ENTITY>null</ENTITY><BRANCH>002</BRANCH><MODULEID>WB</MODULEID><SERVICE>FCUBSRTService</SERVICE><OPERATION>CreateTransaction</OPERATION><DESTINATION>SMFBPORTAL</DESTINATION><FUNCTIONID>DEGRTTLR</FUNCTIONID><ACTION>NEW</ACTION><MSGSTAT>SUCCESS</MSGSTAT></FCUBS_HEADER><FCUBS_BODY><FCUBS_WARNING_RESP><WARNING><WCODE>AC-OVD05</WCODE><WDESC>Available Balance 864.04 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class</WDESC></WARNING><WARNING><WCODE>AC-OVD05</WCODE><WDESC>Available Balance 986.24 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class</WDESC></WARNING><WARNING><WCODE>AC-OVD05</WCODE><WDESC>Available Balance 997.24 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class</WDESC></WARNING><WARNING><WCODE>GW-SAV-03</WCODE><WDESC>Transaction completed Successfully</WDESC></WARNING></FCUBS_WARNING_RESP></FCUBS_BODY></CREATETRANSACTION_IOPK_RES></S:Body></S:Envelope>
+2025-03-25 18:22:57 | INFO     | Response: {'status': 'SUCCESS', 'warning_code': 'AC-OVD05', 'warning_description': 'Available Balance 864.04 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class', 'fcc_ref': None}
+2025-03-25 18:22:57 | INFO     | Results written to mpesa_settlement_results_20250325.txt
+2025-03-25 18:22:57 | INFO     | Processing complete. Summary: Total: 1, Success: 1, Duplicate: 0, Failed: 0, Unknown: 0
