@@ -1,4 +1,5 @@
 *.txt
 *.log
 scripts/*.txt
-venv/
+venv
+*/venv*
