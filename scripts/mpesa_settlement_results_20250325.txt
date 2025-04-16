@@ -1,2 +1,0 @@
-xref|prod|branch|account|amount|narrative|status|message|transaction_reference|error_code|error_description|warning_code|warning_description
-TB866XBFP6-R|UB2C|002|0020001803|122.20|MOBILE MONEY: MPESA REF: TB866XBFP6 - 254705825346  - ESB20250227443750|success|Transaction created successfully||||AC-OVD05|Available Balance 864.04 for 0020001803 is lesser than the Min balance 1,000.00 for the Account Class

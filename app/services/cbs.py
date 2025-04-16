@@ -10,6 +10,10 @@ from pathlib import Path
 
 from app.services.logger import cbs_logger
 
+class CBSConnectionError(Exception):
+    """Exception raised for CBS connection errors."""
+    pass
+
 class FlexcubeService:
     def __init__(self):
         self.headers = {
@@ -60,45 +64,72 @@ class FlexcubeService:
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/{service}">
             <soapenv:Header/>
             <soapenv:Body>
-                <fcub:{operation.upper()}_IOFS_REQ>
+                <fcub:{operation.upper()}_FSFS_REQ>
                     <fcub:FCUBS_HEADER>
                         {header_xml}
                     </fcub:FCUBS_HEADER>
                     <fcub:FCUBS_BODY>
                         {body_xml}
                     </fcub:FCUBS_BODY>
-                </fcub:{operation.upper()}_IOFS_REQ>
+                </fcub:{operation.upper()}_FSFS_REQ>
             </soapenv:Body>
         </soapenv:Envelope>
         """
 
-    async def _make_soap_request(self, service: str, operation: str, body: Dict[str, Any], branch: str = "001") -> Optional[Dict]:
-        """Make SOAP request to CBS"""
+    async def _make_soap_request(
+        self,
+        service: str,
+        operation: str,
+        body: Dict[str, Any],
+        branch: str = "001"
+    ) -> str:
+        """Make a SOAP request to CBS."""
         try:
+            # Construct the appropriate service URL based on the service type
+            if service == "FCUBSCustomerService":
+                service_url = f"{settings.CBS_SOAP_URL}/FCUBSCustomerService/FCUBSCustomerService"
+            elif service == "FCUBSRTService":
+                service_url = f"{settings.CBS_SOAP_URL}/FCUBSRTService/FCUBSRTService"
+            elif service == "RTService":
+                service_url = f"{settings.CBS_SOAP_URL}/RTService/RTService"
+            elif service == "CustomerService":
+                service_url = f"{settings.CBS_SOAP_URL}/CustomerService/CustomerService"
+            elif service == "AccountService":
+                service_url = f"{settings.CBS_SOAP_URL}/AccountService/AccountService"
+            else:
+                service_url = f"{settings.CBS_SOAP_URL}/{service}/{service}"
+
+            # Create SOAP envelope with proper header and body
             header = self._create_header(service, operation, branch)
             soap_envelope = self._create_soap_envelope(header, body)
-            service_url = f"{settings.CBS_SOAP_URL}/{service}/{service}"
+
             # Log request details
             cbs_logger.log_request(service, operation, soap_envelope)
-            
+
+            # Make the request using aiohttp
             async with aiohttp.ClientSession() as session:
                 async with session.post(
                     service_url,
                     data=soap_envelope,
-                    headers=self.headers
+                    headers={
+                        "Content-Type": "text/xml;charset=UTF-8",
+                        "SOAPAction": f"{service}#{operation}",
+                    },
                 ) as response:
-                    
                     if response.status != 200:
-                        self.logger.error(f"Failed making SOAP request to CBS {service} {operation}: {response.status}")
-                        return None
-                            
-                    self.logger.info(f"Response from CBS -- Verify CIF: {response}")
-                    response_text = await response.text()
-
-                    return response_text
+                        cbs_logger.log_error(f"Failed making SOAP request to CBS {service} {operation}: {response.status}")
+                        raise CBSConnectionError(f"Failed to connect to CBS: HTTP {response.status}")
                     
+                    response_text = await response.text()
+                    cbs_logger.log_response(response_text)
+                    return response_text
+
+        except aiohttp.ClientError as e:
+            cbs_logger.log_error(f"HTTP error during SOAP request: {str(e)}")
+            raise CBSConnectionError(f"Failed to connect to CBS: {str(e)}")
         except Exception as e:
-            return None
+            cbs_logger.log_error(f"Unexpected error during SOAP request: {str(e)}")
+            raise CBSConnectionError(f"Unexpected error during CBS request: {str(e)}")
 
     async def verify_cif(self, cif_number: str) -> Dict[str, Any]:
         """Verify customer CIF number and validate status"""
@@ -456,6 +487,168 @@ class FlexcubeService:
                 "transaction_reference": ""
             }
 
+    async def create_amount_block(
+        self,
+        account: str,
+        amount: Decimal,
+        reference: str,
+        branch: str,
+        phone: str
+    ) -> Dict[str, Any]:
+        """Create amount block in CBS"""
+        try:
+            body = {
+                "FCUBS_BODY": {
+                    "Amount-Blocks-Full": {
+                        "ACC": account,
+                        "AMTBLKNO": reference,
+                        "AMT": str(amount),
+                        "ABLKTYPE": "F",
+                        "REFERENCE_NO": reference,
+                        "HPCODE": "MPESA",
+                        "HOLDDESC": f"HOLD MPESA {reference}",
+                        "BRANCH": branch,
+                        "BENEFICIARY_TELEPHONE": phone,
+                        "VERIFY_AVL_BAL": "Y"
+                    }
+                }
+            }
+            
+            response = await self._make_soap_request(
+                "FCUBSCustomerService", 
+                "CreateAmtBlk", 
+                body, 
+                branch
+            )
+            
+            if not response:
+                return {
+                    "status": "failed",
+                    "message": "Failed to create amount block"
+                }
+                
+            # Parse response using CBSXMLParser
+            body, msg_status = CBSXMLParser.parse_response(response, "CREATEAMTBLK")
+            
+            if "SUCCESS" in msg_status:
+                return {
+                    "status": "success",
+                    "message": "Amount block created successfully",
+                    "reference": reference
+                }
+                
+            return {
+                "status": "failed",
+                "message": "Failed to create amount block",
+                "error": body.get("error_description", "Unknown error")
+            }
+            
+        except Exception as e:
+            return {
+                "status": "failed",
+                "message": str(e)
+            }
+
+    async def close_amount_block(
+        self,
+        account: str,
+        reference: str,
+        branch: str
+    ) -> Dict[str, Any]:
+        """Close amount block in CBS"""
+        try:
+            body = {
+                "FCUBS_BODY": {
+                    "Amount-Blocks-Full": {
+                        "ACC": account,
+                        "AMTBLKNO": reference
+                    }
+                }
+            }
+            
+            response = await self._make_soap_request(
+                "FCUBSCustomerService", 
+                "CloseAmtBlk", 
+                body, 
+                branch
+            )
+            
+            if not response:
+                return {
+                    "status": "failed",
+                    "message": "Failed to close amount block"
+                }
+                
+            body, msg_status = CBSXMLParser.parse_response(response, "CLOSEAMTBLK")
+            
+            if "SUCCESS" in msg_status or "Record Successfully Closed and Authorized" in str(body):
+                return {
+                    "status": "success",
+                    "message": "Amount block closed successfully"
+                }
+                
+            return {
+                "status": "failed",
+                "message": "Failed to close amount block",
+                "error": body.get("error_description", "Unknown error")
+            }
+            
+        except Exception as e:
+            return {
+                "status": "failed",
+                "message": str(e)
+            }
+
+    async def reopen_amount_block(
+        self,
+        account: str,
+        reference: str,
+        branch: str
+    ) -> Dict[str, Any]:
+        """Reopen amount block in CBS"""
+        try:
+            body = {
+                "FCUBS_BODY": {
+                    "Amount-Blocks-Full": {
+                        "ACC": account,
+                        "AMTBLKNO": reference
+                    }
+                }
+            }
+            
+            response = await self._make_soap_request(
+                "FCUBSCustomerService", 
+                "ReopenAmtBlk", 
+                body, 
+                branch
+            )
+            
+            if not response:
+                return {
+                    "status": "failed",
+                    "message": "Failed to reopen amount block"
+                }
+                
+            body, msg_status = CBSXMLParser.parse_response(response, "REOPENAMTBLK")
+            
+            if "SUCCESS" in msg_status:
+                return {
+                    "status": "success",
+                    "message": "Amount block reopened successfully"
+                }
+                
+            return {
+                "status": "failed",
+                "message": "Failed to reopen amount block",
+                "error": body.get("error_description", "Unknown error")
+            }
+            
+        except Exception as e:
+            return {
+                "status": "failed",
+                "message": str(e)
+            }
+
 # Create a singleton instance
 flexcube_service = FlexcubeService()
 
@@ -478,7 +671,17 @@ async def validate_transfer(from_account: str, to_account: str, amount: Decimal)
 
 async def execute_transfer(from_account: str, to_account: str, amount: Decimal, reference: str, description: str, otp: str = None) -> Dict[str, Any]:
     """Execute transfer through CBS"""
-    return await flexcube_service.execute_transfer(from_account, to_account, amount, reference, description, otp) 
+    return await flexcube_service.execute_transfer(from_account, to_account, amount, reference, description, otp)
+
 async def get_account_balance(account_number: str) -> Dict[str, Any]:
     """Get account balance from CBS"""
     return await flexcube_service.get_cbs_account_balance(account_number)
+
+async def create_amount_block(account: str, amount: Decimal, reference: str, branch: str, phone: str) -> Dict[str, Any]:
+    return await flexcube_service.create_amount_block(account, amount, reference, branch, phone)
+
+async def close_amount_block(account: str, reference: str, branch: str) -> Dict[str, Any]:
+    return await flexcube_service.close_amount_block(account, reference, branch)
+
+async def reopen_amount_block(account: str, reference: str, branch: str) -> Dict[str, Any]:
+    return await flexcube_service.reopen_amount_block(account, reference, branch)

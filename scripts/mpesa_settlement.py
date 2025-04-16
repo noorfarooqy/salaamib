@@ -6,7 +6,7 @@ This script processes MPESA transactions by reading data from a text file
 and executing SOAP requests to create transactions in Flexcube.
 
 Input file format:
-xref|prod|branch|acc|amount|narrative
+xref|prod|branch|acc|amount|narrative[|block_reference]
 """
 
 import os
@@ -19,6 +19,15 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
 import argparse
 from pathlib import Path
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from app.services.cbs import (
+    close_amount_block,
+    reopen_amount_block,
+    flexcube_service
+)
 
 # Ensure logs directory exists
 logs_dir = Path("logs")
@@ -42,28 +51,34 @@ class MPESATransaction:
     def __init__(self, line: str):
         """
         Initialize transaction with data from a line in the input file.
-        Format: xref|prod|branch|acc|amount|narrative
+        Format: xref|prod|branch|acc|amount|narrative[|block_reference]
         """
         parts = line.strip().split('|')
-        if len(parts) != 6:
+        if len(parts) < 6:
             raise ValueError(f"Invalid transaction format: {line}")
         
         self.xref = parts[0]
         self.prod = parts[1]
         self.branch = parts[2]
         self.account = parts[3]
+        self.narrative = parts[5]
         
         try:
             self.amount = float(parts[4])
         except ValueError:
             raise ValueError(f"Invalid amount: {parts[4]}")
             
-        self.narrative = parts[5]
+        # Handle narrative and optional block reference
+        if len(parts) > 6:
+            self.block_reference = parts[6]
+        else:
+            self.block_reference = None
         
         # Transaction response data
         self.status = "pending"
         self.message = ""
         self.transaction_reference = None
+        self.fcc_reference = None  # Added FCC reference field
         self.error_code = None
         self.error_description = None
         self.warning_code = None
@@ -71,7 +86,8 @@ class MPESATransaction:
 
     def __str__(self) -> str:
         return (f"Transaction: {self.xref}, Product: {self.prod}, Branch: {self.branch}, "
-                f"Account: {self.account}, Amount: {self.amount}, Narrative: {self.narrative}")
+                f"Account: {self.account}, Amount: {self.amount}, Narrative: {self.narrative}, "
+                f"Block Reference: {self.block_reference}")
 
 class MPESASettlementProcessor:
     """Class to process MPESA settlement transactions."""
@@ -82,96 +98,86 @@ class MPESASettlementProcessor:
         self.source = source
         self.ubscomp = ubscomp
         self.userid = userid
-        self.headers = {
-            'Content-Type': 'text/xml;charset=UTF-8',
-            'SOAPAction': 'CreateTransaction'
-        }
         self.timeout = aiohttp.ClientTimeout(total=60)  # 60 seconds timeout
-
-    def _create_transaction_soap_request(self, transaction: MPESATransaction) -> str:
-        """Create SOAP request XML for a transaction."""
-        return f"""<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:fcub="http://fcubs.ofss.com/service/FCUBSRTService">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <fcub:CREATETRANSACTION_IOPK_REQ>
-         <fcub:FCUBS_HEADER>
-            <fcub:SOURCE>{self.source}</fcub:SOURCE>
-            <fcub:UBSCOMP>{self.ubscomp}</fcub:UBSCOMP>
-            <fcub:USERID>{self.userid}</fcub:USERID>
-            <fcub:BRANCH>{transaction.branch}</fcub:BRANCH>
-            <fcub:SERVICE>FCUBSRTService</fcub:SERVICE>
-            <fcub:OPERATION>CreateTransaction</fcub:OPERATION>
-         </fcub:FCUBS_HEADER>
-         <fcub:FCUBS_BODY>
-            <fcub:Transaction-Details-IO>
-               <fcub:XREF>{transaction.xref}</fcub:XREF>
-               <fcub:PRD>{transaction.prod}</fcub:PRD>
-               <fcub:BRN>{transaction.branch}</fcub:BRN>
-               <fcub:TXNBRN>{transaction.branch}</fcub:TXNBRN>
-               <fcub:TXNACC>{transaction.account}</fcub:TXNACC>
-               <fcub:TXNCCY>KES</fcub:TXNCCY>
-               <fcub:TXNAMT>{transaction.amount:.2f}</fcub:TXNAMT>
-               <fcub:NARRATIVE>{transaction.narrative}</fcub:NARRATIVE>
-            </fcub:Transaction-Details-IO>
-         </fcub:FCUBS_BODY>
-      </fcub:CREATETRANSACTION_IOPK_REQ>
-   </soapenv:Body>
-</soapenv:Envelope>"""
 
     async def execute_transaction(self, transaction: MPESATransaction) -> Dict[str, Any]:
         """Execute a transaction by sending a SOAP request to CBS."""
-        soap_request = self._create_transaction_soap_request(transaction)
-        
-        logger.info(f"SOAP Request: {soap_request}")
-
         try:
-            logger.info(f"Processing transaction for ref: {transaction.xref}")
+            # If transaction has a block reference, close it first
+            if transaction.block_reference:
+                close_result = await close_amount_block(
+                    transaction.account,
+                    transaction.block_reference,
+                    transaction.branch
+                )
+                
+                if close_result["status"] != "success":
+                    logger.error(f"Failed to close amount block: {close_result}")
+                    transaction.status = "failed"
+                    transaction.message = f"Failed to close amount block: {close_result['message']}"
+                    return {
+                        "status": "ERROR",
+                        "error": close_result["message"]
+                    }
             
-            async with aiohttp.ClientSession(timeout=self.timeout) as session:
-                async with session.post(
-                    self.cbs_url,
-                    data=soap_request,
-                    headers=self.headers
-                ) as response:
-                    response_text = await response.text()
-                    
-                    if response.status != 200:
-                        logger.error(f"CBS Error: Status code {response.status} for ref {transaction.xref}")
-                        logger.error(f"Request URL: {self.cbs_url}")
-                        logger.error(f"Request Headers: {self.headers}")
-                        transaction.status = "failed"
-                        transaction.message = f"CBS returned status code {response.status}"
-                        return {
-                            'status': 'ERROR',
-                            'error': f'CBS returned status code {response.status}'
-                        }
-                    
-                    # Parse response
-                    result = self._parse_response(response_text)
-                    logger.info(f"Response: {result}")
-                    
-                    # Update transaction status
-                    if result['status'] == 'SUCCESS':
-                        transaction.status = "success"
-                        transaction.message = "Transaction created successfully"
-                        transaction.transaction_reference = result.get('fcc_ref')
-                        transaction.warning_code = result.get('warning_code')
-                        transaction.warning_description = result.get('warning_description')
-                    elif result['status'] == 'DUPLICATE':
-                        transaction.status = "duplicate"
-                        transaction.message = result.get('error_description', 'Duplicate transaction')
-                        transaction.transaction_reference = result.get('fcc_ref')
-                        transaction.error_code = result.get('error_code')
-                        transaction.error_description = result.get('error_description')
-                    else:
-                        transaction.status = "failed"
-                        transaction.message = result.get('error_description', 'Transaction failed')
-                        transaction.error_code = result.get('error_code')
-                        transaction.error_description = result.get('error_description')
-                    
-                    return result
+            # Create transaction body
+            body = {
+                "FCUBS_BODY": {
+                    "Transaction-Details": {
+                        "XREF": transaction.xref,
+                        "PRD": transaction.prod,
+                        "BRN": transaction.branch,
+                        "TXNBRN": transaction.branch,
+                        "TXNACC": transaction.account,
+                        "TXNCCY": "KES",
+                        "TXNAMT": f"{transaction.amount:.2f}",
+                        "NARRATIVE": transaction.narrative
+                    }
+                }
+            }
+
+            # Execute the transaction using FlexcubeService
+            response = await flexcube_service._make_soap_request(
+                service="FCUBSRTService",
+                operation="CreateTransaction",
+                body=body,
+                branch=transaction.branch
+            )
+            
+            # Parse response
+            result = self._parse_response(response)
+            
+            # If transaction failed and we had a block, reopen it
+            if result["status"] != "SUCCESS" and transaction.block_reference:
+                await reopen_amount_block(
+                    transaction.account,
+                    transaction.block_reference,
+                    transaction.branch
+                )
+            
+            # Update transaction status
+            if result["status"] == "SUCCESS":
+                transaction.status = "success"
+                transaction.message = "Transaction created successfully"
+                transaction.transaction_reference = result.get("fcc_ref")
+                transaction.fcc_reference = result.get("fcc_ref")  # Store FCC reference
+            else:
+                transaction.status = "failed"
+                transaction.message = result.get("error_description", "Transaction failed")
+                transaction.error_code = result.get("error_code")
+                transaction.error_description = result.get("error_description")
+            
+            return result
                     
         except Exception as e:
+            # If any error occurs and we had a block, reopen it
+            if transaction.block_reference:
+                await reopen_amount_block(
+                    transaction.account,
+                    transaction.block_reference,
+                    transaction.branch
+                )
+            
             error_msg = f"Error executing transaction {transaction.xref}: {str(e)}"
             logger.error(error_msg)
             logger.exception("Detailed error traceback:")
@@ -179,8 +185,7 @@ class MPESASettlementProcessor:
             transaction.message = error_msg
             return {
                 "status": "ERROR",
-                "error": error_msg,
-                "transaction_reference": None
+                "error": error_msg
             }
 
     def _parse_response(self, response_text: str) -> Dict[str, Any]:
@@ -327,13 +332,14 @@ def write_results(transactions: List[MPESATransaction], output_file: str) -> Non
     try:
         with open(output_file, 'w') as file:
             # Write header
-            file.write("xref|prod|branch|account|amount|narrative|status|message|transaction_reference|error_code|error_description|warning_code|warning_description\n")
+            file.write("xref|prod|branch|account|amount|narrative|status|message|transaction_reference|fcc_reference|error_code|error_description|warning_code|warning_description\n")
             
             # Write transaction results
             for txn in transactions:
                 file.write(f"{txn.xref}|{txn.prod}|{txn.branch}|{txn.account}|{txn.amount:.2f}|"
                           f"{txn.narrative}|{txn.status}|{txn.message}|{txn.transaction_reference or ''}|"
-                          f"{txn.error_code or ''}|{txn.error_description or ''}|{txn.warning_code or ''}|{txn.warning_description or ''}\n")
+                          f"{txn.fcc_reference or ''}|{txn.error_code or ''}|{txn.error_description or ''}|"
+                          f"{txn.warning_code or ''}|{txn.warning_description or ''}\n")
         
         logger.info(f"Results written to {output_file}")
     except Exception as e:
@@ -358,9 +364,10 @@ async def main():
     args = parser.parse_args()
     
     # Adjust URL based on environment
-    default_userid = "USSDSMFB"
-    default_url = "http://10.54.66.10:7701/FCUBSRTService/FCUBSRTService"
+    default_userid = "SYSTEM"
+    default_url = "http://10.54.66.10:7005/FCUBSRTService/FCUBSRTService"
     if args.env == "PROD":
+        default_userid = "USSDSMFB"
         default_url = "http://10.54.12.70:7004/FCUBSRTService/FCUBSRTService"
     
     cbs_url = default_url
