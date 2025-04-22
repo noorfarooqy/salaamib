@@ -31,14 +31,17 @@ class FlexcubeService:
     def _create_header(self, service: str, operation: str, branch: str = "001") -> Dict[str, str]:
         """Create FCUBS header for requests"""
         # Order matters for the header fields
-        return {
+        # self.logger.info(f"Creating header for service: {service}, operation: {operation}, branch: {branch}")
+        header_info= {
             "SOURCE": settings.CBS_SOURCE,
             "UBSCOMP": settings.CBS_UBSCOMP,
-            "USERID": settings.CBS_USERID,
+            "USERID": "USSDSMFB", #settings.CBS_USERID,
             "BRANCH": branch,
             "SERVICE": service,
             "OPERATION": operation,
         }
+        self.logger.info(f"Header info: {header_info}")
+        return header_info
 
     def _create_soap_envelope(self, header: Dict[str, str], body: Dict[str, Any]) -> str:
         """Create SOAP envelope with header and body"""
@@ -81,30 +84,25 @@ class FlexcubeService:
         service: str,
         operation: str,
         body: Dict[str, Any],
-        branch: str = "001"
+        branch: str = "001",
+        service_url: str = ''
     ) -> str:
         """Make a SOAP request to CBS."""
         try:
             # Construct the appropriate service URL based on the service type
-            if service == "FCUBSCustomerService":
-                service_url = f"{settings.CBS_SOAP_URL}/FCUBSCustomerService/FCUBSCustomerService"
-            elif service == "FCUBSRTService":
-                service_url = f"{settings.CBS_SOAP_URL}/FCUBSRTService/FCUBSRTService"
-            elif service == "RTService":
-                service_url = f"{settings.CBS_SOAP_URL}/RTService/RTService"
-            elif service == "CustomerService":
-                service_url = f"{settings.CBS_SOAP_URL}/CustomerService/CustomerService"
-            elif service == "AccountService":
-                service_url = f"{settings.CBS_SOAP_URL}/AccountService/AccountService"
-            else:
-                service_url = f"{settings.CBS_SOAP_URL}/{service}/{service}"
+            # if service == "FCUBSCustomerService":
+            #     service_url = f"{settings.CBS_SOAP_URL}/FCUBSCustomerService/FCUBSCustomerService"
+            # elif service == "FCUBSRTService":
+            #     service_url = f"{settings.CBS_SOAP_URL}/FCUBSRTService/FCUBSRTService"
+            # else:
+            #     service_url = f"{settings.CBS_SOAP_URL}/{service}/{service}"
 
             # Create SOAP envelope with proper header and body
             header = self._create_header(service, operation, branch)
             soap_envelope = self._create_soap_envelope(header, body)
 
             # Log request details
-            cbs_logger.log_request(service, operation, soap_envelope)
+            cbs_logger.log_request(service_url, operation, soap_envelope)
 
             # Make the request using aiohttp
             async with aiohttp.ClientSession() as session:
@@ -553,7 +551,8 @@ class FlexcubeService:
         self,
         account: str,
         reference: str,
-        branch: str
+        branch: str,
+        service_url: str = ''
     ) -> Dict[str, Any]:
         """Close amount block in CBS"""
         try:
@@ -570,7 +569,8 @@ class FlexcubeService:
                 "FCUBSCustomerService", 
                 "CloseAmtBlk", 
                 body, 
-                branch
+                branch,
+                service_url
             )
             
             if not response:
@@ -680,8 +680,8 @@ async def get_account_balance(account_number: str) -> Dict[str, Any]:
 async def create_amount_block(account: str, amount: Decimal, reference: str, branch: str, phone: str) -> Dict[str, Any]:
     return await flexcube_service.create_amount_block(account, amount, reference, branch, phone)
 
-async def close_amount_block(account: str, reference: str, branch: str) -> Dict[str, Any]:
-    return await flexcube_service.close_amount_block(account, reference, branch)
+async def close_amount_block(account: str, reference: str, branch: str, service_url: str = '') -> Dict[str, Any]:
+    return await flexcube_service.close_amount_block(account, reference, branch, service_url)
 
 async def reopen_amount_block(account: str, reference: str, branch: str) -> Dict[str, Any]:
     return await flexcube_service.reopen_amount_block(account, reference, branch)

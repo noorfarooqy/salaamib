@@ -108,7 +108,8 @@ class MPESASettlementProcessor:
                 close_result = await close_amount_block(
                     transaction.account,
                     transaction.block_reference,
-                    transaction.branch
+                    transaction.branch,
+                    self.cbs_url+'/FCUBSCustomerService/FCUBSCustomerService'
                 )
                 
                 if close_result["status"] != "success":
@@ -141,7 +142,8 @@ class MPESASettlementProcessor:
                 service="FCUBSRTService",
                 operation="CreateTransaction",
                 body=body,
-                branch=transaction.branch
+                branch=transaction.branch,
+                service_url=self.cbs_url+'/FCUBSRTService/FCUBSRTService'
             )
             
             # Parse response
@@ -152,7 +154,8 @@ class MPESASettlementProcessor:
                 await reopen_amount_block(
                     transaction.account,
                     transaction.block_reference,
-                    transaction.branch
+                    transaction.branch,
+                    self.cbs_url+'/FCUBSCustomerService/FCUBSCustomerService'
                 )
             
             # Update transaction status
@@ -365,13 +368,14 @@ async def main():
     
     # Adjust URL based on environment
     default_userid = "SYSTEM"
-    default_url = "http://10.54.66.10:7005/FCUBSRTService/FCUBSRTService"
+    default_url = ""
     if args.env == "PROD":
         default_userid = "USSDSMFB"
-        default_url = "http://10.54.12.70:7004/FCUBSRTService/FCUBSRTService"
+        default_url = "http://10.54.12.70:7004"
+        logger.info("[*] Using PROD environment for CBS "+default_url)
     
     cbs_url = default_url
-    cbs_userid = args.userid if args.userid != "USSDSMFB" else default_userid
+    # cbs_userid = args.userid if args.userid != "USSDSMFB" else default_userid
     
     logger.info(f"Starting MPESA settlement processing from file: {args.input_file}")
     logger.info(f"Environment: {args.env}, CBS URL: {cbs_url}")
@@ -389,7 +393,7 @@ async def main():
         cbs_url=cbs_url,
         source=args.source,
         ubscomp=args.ubscomp,
-        userid=cbs_userid
+        userid=default_userid
     )
     
     # Process transactions

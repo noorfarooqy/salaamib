@@ -3,7 +3,7 @@ from typing import Optional
 
 class Settings(BaseSettings):
     APP_NAME: str = "Salaam Internet Banking"
-    ENVIRONMENT: str = "development"
+    ENVIRONMENT: str = "production"
     DEBUG: bool = True
     API_V1_PREFIX: str = "/api/v1"
     
@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     CBS_PASSWORD: str
     CBS_SOURCE: str = "SMFBPORTAL"
     CBS_UBSCOMP: str = "FCUBS"
-    CBS_USERID: str = "SYSTEM"
+    CBS_USERID: str = "USSDSMFB"
     
     # AfricasTalking Configuration
     AT_API_URL: str = "https://api.africastalking.com/version1"
